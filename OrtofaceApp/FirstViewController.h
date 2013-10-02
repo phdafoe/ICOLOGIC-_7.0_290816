@@ -7,7 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
 
-@interface FirstViewController : UIViewController
+
+@interface FirstViewController : UIViewController <UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
+{
+    UIPageControl *pageControll;
+    UIScrollView *scrollView;
+}
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControll;
+
+- (IBAction)clickPageControll:(id)sender;
+
+@property (strong, nonatomic) IBOutlet iCarousel *carousel;
+
+@property (nonatomic) NSMutableArray *items;
+
+
+
+
+
 
 @end
