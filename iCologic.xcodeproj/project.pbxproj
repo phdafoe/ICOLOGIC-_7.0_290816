@@ -10,6 +10,7 @@
 		2803C43C174E0533007B7C74 /* libros.png in Resources */ = {isa = PBXBuildFile; fileRef = 2803C43B174E0533007B7C74 /* libros.png */; };
 		2803C43F174E128D007B7C74 /* SuperGaleriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2803C43E174E128D007B7C74 /* SuperGaleriaViewController.m */; };
 		2803C447174E257D007B7C74 /* ortoface.png in Resources */ = {isa = PBXBuildFile; fileRef = 2803C446174E257D007B7C74 /* ortoface.png */; };
+		28BA411717FC5EB80056259E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA411617FC5EB80056259E /* WebViewController.m */; };
 		28BB864F1778727200864E07 /* NewsLetter1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28BB864C1778727200864E07 /* NewsLetter1.jpg */; };
 		28BB86501778727200864E07 /* NewsLetter2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28BB864D1778727200864E07 /* NewsLetter2.jpg */; };
 		28BB86511778727200864E07 /* NewsLetter3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28BB864E1778727200864E07 /* NewsLetter3.jpg */; };
@@ -115,6 +116,8 @@
 		2803C43D174E128D007B7C74 /* SuperGaleriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperGaleriaViewController.h; sourceTree = "<group>"; };
 		2803C43E174E128D007B7C74 /* SuperGaleriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperGaleriaViewController.m; sourceTree = "<group>"; };
 		2803C446174E257D007B7C74 /* ortoface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ortoface.png; sourceTree = "<group>"; };
+		28BA411517FC5EB80056259E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		28BA411617FC5EB80056259E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		28BB864C1778727200864E07 /* NewsLetter1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewsLetter1.jpg; sourceTree = "<group>"; };
 		28BB864D1778727200864E07 /* NewsLetter2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewsLetter2.jpg; sourceTree = "<group>"; };
 		28BB864E1778727200864E07 /* NewsLetter3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewsLetter3.jpg; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				685D3354162DB2BC000E9FEE /* FirstViewController.m */,
 				2803C43D174E128D007B7C74 /* SuperGaleriaViewController.h */,
 				2803C43E174E128D007B7C74 /* SuperGaleriaViewController.m */,
+				28BA411517FC5EB80056259E /* WebViewController.h */,
+				28BA411617FC5EB80056259E /* WebViewController.m */,
 				685D335A162DB2BC000E9FEE /* SecondViewController.h */,
 				685D335B162DB2BC000E9FEE /* SecondViewController.m */,
 				6804A3B51645CCBF004E68EE /* FirmaDigtalViewController.h */,
@@ -613,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F9D13E173D546D009C789C /* UIImage+ImageWithUIView.m in Sources */,
+				28BA411717FC5EB80056259E /* WebViewController.m in Sources */,
 				68F9D13D173D5465009C789C /* ECSlidingViewController.m in Sources */,
 				685D3345162DB2BC000E9FEE /* main.m in Sources */,
 				685D3349162DB2BC000E9FEE /* AppDelegate.m in Sources */,

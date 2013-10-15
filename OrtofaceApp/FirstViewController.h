@@ -10,21 +10,30 @@
 #import "iCarousel.h"
 
 
+
 @interface FirstViewController : UIViewController <UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
 {
     UIPageControl *pageControll;
     UIScrollView *scrollView;
+    IBOutlet UIButton *webOrtoface;
+    
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControll;
 
+@property (nonatomic, strong) IBOutlet UIButton *webOrtoface;
+
 - (IBAction)clickPageControll:(id)sender;
 
 @property (strong, nonatomic) IBOutlet iCarousel *carousel;
 
 @property (nonatomic) NSMutableArray *items;
+
+@property (nonatomic, strong) NSString *urlstr;
+
+
 
 
 

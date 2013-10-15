@@ -8,10 +8,11 @@
 
 #import "FirstViewController.h"
 #import "FXImageView.h"
+#import "WebViewController.h"
 
 @implementation FirstViewController
 
-@synthesize pageControll, scrollView, carousel, items;
+@synthesize pageControll, scrollView, carousel, items, webOrtoface;
 
 
 -(void)awakeFromNib
@@ -93,7 +94,7 @@
     if (view == nil) {
         FXImageView *imageView = [[FXImageView alloc] initWithFrame:CGRectMake(0, 0, 197.0f, 265.0f)];
         imageView.asynchronous = YES;
-        imageView.reflectionScale = 0.5f;
+        imageView.reflectionScale = 0.2f;
         imageView.reflectionAlpha = 0.25f;
         imageView.reflectionGap = 10.0f;
         imageView.shadowOffset = CGSizeMake(0.0f, 2.0f);
@@ -107,6 +108,18 @@
     return view;
 }
 
+
+#pragma mark - metodo segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"web"])
+    {
+        self.urlstr = _urlstr;
+        WebViewController *targetVC = [segue destinationViewController];
+        targetVC.urlstr = _urlstr;
+    }
+}
 
 
 
