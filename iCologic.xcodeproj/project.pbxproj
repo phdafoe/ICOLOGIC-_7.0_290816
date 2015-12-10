@@ -14,6 +14,7 @@
 		28BB864F1778727200864E07 /* NewsLetter1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28BB864C1778727200864E07 /* NewsLetter1.jpg */; };
 		28BB86501778727200864E07 /* NewsLetter2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28BB864D1778727200864E07 /* NewsLetter2.jpg */; };
 		28BB86511778727200864E07 /* NewsLetter3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28BB864E1778727200864E07 /* NewsLetter3.jpg */; };
+		63FD4D621A530019001495D6 /* libT1Autograph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FD4D5E1A530019001495D6 /* libT1Autograph.a */; };
 		6804A3B71645CCBF004E68EE /* FirmaDigtalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6804A3B61645CCBF004E68EE /* FirmaDigtalViewController.m */; };
 		6808AE36164E9E7700EE8CF8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6808AE35164E9E7700EE8CF8 /* CoreVideo.framework */; };
 		681FF2431739381200CE3A70 /* FirmaDigital_Kid_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF2421739381200CE3A70 /* FirmaDigital_Kid_ViewController.m */; };
@@ -87,7 +88,6 @@
 		6866E0F91638416100ABB26B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6866E0F81638416100ABB26B /* logo.png */; };
 		686EF1B91646D7F40039FD75 /* autograph_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 686EF1B41646D7F40039FD75 /* autograph_x.png */; };
 		686EF1BA1646D7F40039FD75 /* t1_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 686EF1B51646D7F40039FD75 /* t1_logo.png */; };
-		686EF1BB1646D7F40039FD75 /* libT1Autograph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 686EF1B61646D7F40039FD75 /* libT1Autograph.a */; };
 		686EF1BF1646D99A0039FD75 /* bluebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 686EF1BD1646D99A0039FD75 /* bluebutton.png */; };
 		686EF1C01646D99A0039FD75 /* bluebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 686EF1BE1646D99A0039FD75 /* bluebutton@2x.png */; };
 		68704624173A3897001440E9 /* FirmaDigital_Apnea_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68704623173A3897001440E9 /* FirmaDigital_Apnea_ViewController.m */; };
@@ -121,6 +121,10 @@
 		28BB864C1778727200864E07 /* NewsLetter1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewsLetter1.jpg; sourceTree = "<group>"; };
 		28BB864D1778727200864E07 /* NewsLetter2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewsLetter2.jpg; sourceTree = "<group>"; };
 		28BB864E1778727200864E07 /* NewsLetter3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NewsLetter3.jpg; sourceTree = "<group>"; };
+		63FD4D5E1A530019001495D6 /* libT1Autograph.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libT1Autograph.a; sourceTree = "<group>"; };
+		63FD4D5F1A530019001495D6 /* T1Autograph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1Autograph.h; sourceTree = "<group>"; };
+		63FD4D601A530019001495D6 /* T1Signature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1Signature.h; sourceTree = "<group>"; };
+		63FD4D611A530019001495D6 /* T1SignaturePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1SignaturePoint.h; sourceTree = "<group>"; };
 		6804A3B51645CCBF004E68EE /* FirmaDigtalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirmaDigtalViewController.h; sourceTree = "<group>"; };
 		6804A3B61645CCBF004E68EE /* FirmaDigtalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirmaDigtalViewController.m; sourceTree = "<group>"; };
 		6808AE35164E9E7700EE8CF8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -210,9 +214,6 @@
 		6866E0F81638416100ABB26B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		686EF1B41646D7F40039FD75 /* autograph_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autograph_x.png; sourceTree = "<group>"; };
 		686EF1B51646D7F40039FD75 /* t1_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t1_logo.png; sourceTree = "<group>"; };
-		686EF1B61646D7F40039FD75 /* libT1Autograph.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libT1Autograph.a; sourceTree = "<group>"; };
-		686EF1B71646D7F40039FD75 /* T1Autograph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1Autograph.h; sourceTree = "<group>"; };
-		686EF1B81646D7F40039FD75 /* T1Signature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1Signature.h; sourceTree = "<group>"; };
 		686EF1BD1646D99A0039FD75 /* bluebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluebutton.png; sourceTree = "<group>"; };
 		686EF1BE1646D99A0039FD75 /* bluebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluebutton@2x.png"; sourceTree = "<group>"; };
 		68704622173A3897001440E9 /* FirmaDigital_Apnea_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirmaDigital_Apnea_ViewController.h; sourceTree = SOURCE_ROOT; };
@@ -254,9 +255,9 @@
 				6820F8C7162DE8FB000922F1 /* QuartzCore.framework in Frameworks */,
 				685D3375162DC78B000E9FEE /* iAd.framework in Frameworks */,
 				685D3339162DB2BC000E9FEE /* UIKit.framework in Frameworks */,
+				63FD4D621A530019001495D6 /* libT1Autograph.a in Frameworks */,
 				685D333B162DB2BC000E9FEE /* Foundation.framework in Frameworks */,
 				685D333D162DB2BC000E9FEE /* CoreGraphics.framework in Frameworks */,
-				686EF1BB1646D7F40039FD75 /* libT1Autograph.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +459,11 @@
 		686EF1B21646D7F40039FD75 /* T1Autograph */ = {
 			isa = PBXGroup;
 			children = (
+				63FD4D5E1A530019001495D6 /* libT1Autograph.a */,
+				63FD4D5F1A530019001495D6 /* T1Autograph.h */,
+				63FD4D601A530019001495D6 /* T1Signature.h */,
+				63FD4D611A530019001495D6 /* T1SignaturePoint.h */,
 				686EF1B31646D7F40039FD75 /* Images */,
-				686EF1B61646D7F40039FD75 /* libT1Autograph.a */,
-				686EF1B71646D7F40039FD75 /* T1Autograph.h */,
-				686EF1B81646D7F40039FD75 /* T1Signature.h */,
 			);
 			path = T1Autograph;
 			sourceTree = "<group>";
@@ -512,8 +514,13 @@
 		685D332B162DB2BC000E9FEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "andres ocampo";
+				TargetAttributes = {
+					685D3333162DB2BC000E9FEE = {
+						DevelopmentTeam = 2C7W4RF846;
+					};
+				};
 			};
 			buildConfigurationList = 685D332E162DB2BC000E9FEE /* Build configuration list for PBXProject "iCologic" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -672,8 +679,9 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: Andres Ocampo (S5TXXSHPBT)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -685,7 +693,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -701,13 +709,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: Andres Ocampo (S5TXXSHPBT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -718,15 +726,20 @@
 		685D3364162DB2BC000E9FEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OrtofaceApp/iCologic-Prefix.pch";
 				INFOPLIST_FILE = "OrtofaceApp/iCologic-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/T1Autograph\"",
+					"$(PROJECT_DIR)/T1Autograph",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Ocampo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = iCologic;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -734,15 +747,20 @@
 		685D3365162DB2BC000E9FEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OrtofaceApp/iCologic-Prefix.pch";
 				INFOPLIST_FILE = "OrtofaceApp/iCologic-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/T1Autograph\"",
+					"$(PROJECT_DIR)/T1Autograph",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Ocampo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = iCologic;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

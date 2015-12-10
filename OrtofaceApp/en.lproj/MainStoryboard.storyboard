@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - ORTOFACE-->
+        <!--ORTOFACE-->
         <scene sceneID="11">
             <objects>
                 <viewController storyboardIdentifier="Ortoface" id="2" customClass="FirstViewController" sceneMemberID="viewController">
@@ -255,7 +255,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4" kind="modal" modalTransitionStyle="flipHorizontal" id="GVa-i3-TO4"/>
+                                    <segue destination="4" kind="modal" modalTransitionStyle="coverVertical" id="GVa-i3-TO4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -273,7 +273,7 @@
             </objects>
             <point key="canvasLocation" x="5070" y="863"/>
         </scene>
-        <!--Second View Controller - Formulario Adultos-->
+        <!--Formulario Adultos-->
         <scene sceneID="13">
             <objects>
                 <viewController id="3" customClass="SecondViewController" sceneMemberID="viewController">
@@ -320,7 +320,7 @@
                                         </state>
                                         <connections>
                                             <action selector="enviar:" destination="3" eventType="touchUpInside" id="hkQ-Gb-gCu"/>
-                                            <segue destination="ue5-Q0-AsX" kind="modal" identifier="First to second" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="ddh-Yf-MgL"/>
+                                            <segue destination="ue5-Q0-AsX" kind="modal" identifier="First to second" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="ddh-Yf-MgL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gvq-Vt-Mv2">
@@ -1188,7 +1188,7 @@
             </objects>
             <point key="canvasLocation" x="2023" y="718"/>
         </scene>
-        <!--Navigation Controller - ADULTO-->
+        <!--ADULTO-->
         <scene sceneID="7Gd-0c-rFO">
             <objects>
                 <navigationController id="ra6-xy-gDj" sceneMemberID="viewController">
@@ -1310,7 +1310,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4" kind="modal" modalTransitionStyle="flipHorizontal" id="DsW-9B-e9O"/>
+                                    <segue destination="4" kind="modal" modalTransitionStyle="coverVertical" id="DsW-9B-e9O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1328,7 +1328,7 @@
             </objects>
             <point key="canvasLocation" x="4931" y="2433"/>
         </scene>
-        <!--Formulario2 View Controller - Formulario Niños-->
+        <!--Formulario Niños-->
         <scene sceneID="Uhm-xc-toz">
             <objects>
                 <viewController id="2dO-12-BgK" customClass="Formulario2ViewController" sceneMemberID="viewController">
@@ -1375,7 +1375,7 @@
                                         </state>
                                         <connections>
                                             <action selector="enviar:" destination="2dO-12-BgK" eventType="touchUpInside" id="tbX-MI-eBg"/>
-                                            <segue destination="dMK-92-W7f" kind="modal" identifier="First to second" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="g7j-1c-xC2"/>
+                                            <segue destination="dMK-92-W7f" kind="modal" identifier="First to second" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="g7j-1c-xC2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nzg-8S-ng9">
@@ -2294,7 +2294,7 @@
             </objects>
             <point key="canvasLocation" x="4037" y="2877"/>
         </scene>
-        <!--Navigation Controller - NIÑOS-->
+        <!--NIÑOS-->
         <scene sceneID="YOr-f5-q9o">
             <objects>
                 <navigationController id="nmA-pn-cAB" sceneMemberID="viewController">
@@ -2416,7 +2416,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4" kind="modal" modalTransitionStyle="flipHorizontal" id="ayO-nr-6ig"/>
+                                    <segue destination="4" kind="modal" modalTransitionStyle="coverVertical" id="ayO-nr-6ig"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2434,7 +2434,7 @@
             </objects>
             <point key="canvasLocation" x="4936" y="4141"/>
         </scene>
-        <!--Formulario3 View Controller - Formulario Apnea del Sueño-->
+        <!--Formulario Apnea del Sueño-->
         <scene sceneID="12X-z7-nPP">
             <objects>
                 <viewController id="Bdt-xa-IEJ" customClass="Formulario3ViewController" sceneMemberID="viewController">
@@ -2481,7 +2481,7 @@
                                         </state>
                                         <connections>
                                             <action selector="enviar:" destination="Bdt-xa-IEJ" eventType="touchUpInside" id="u0t-6T-g0S"/>
-                                            <segue destination="o5w-az-4Q8" kind="modal" identifier="First to second" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="q9V-m0-fPa"/>
+                                            <segue destination="o5w-az-4Q8" kind="modal" identifier="First to second" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="q9V-m0-fPa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QPb-FG-I6O">
@@ -3530,7 +3530,7 @@
             </objects>
             <point key="canvasLocation" x="4026" y="4604"/>
         </scene>
-        <!--Navigation Controller - APNEA-->
+        <!--APNEA-->
         <scene sceneID="Yne-iK-s9f">
             <objects>
                 <navigationController id="WXC-0q-iHO" sceneMemberID="viewController">
@@ -3579,7 +3579,7 @@
             </objects>
             <point key="canvasLocation" x="4061" y="-1462"/>
         </scene>
-        <!--Super Galeria View Controller - INFORMACION-->
+        <!--INFORMACION-->
         <scene sceneID="UMe-GM-mbv">
             <objects>
                 <viewController storyboardIdentifier="Ortoface2" id="4qr-4S-unP" customClass="SuperGaleriaViewController" sceneMemberID="viewController">
@@ -3619,7 +3619,7 @@
             </objects>
             <point key="canvasLocation" x="5153" y="-667"/>
         </scene>
-        <!--Navigation Controller - ORTOFACE-->
+        <!--ORTOFACE-->
         <scene sceneID="gL8-9h-aeR">
             <objects>
                 <navigationController storyboardIdentifier="navigationController" id="ROQ-KP-MVF" sceneMemberID="viewController">
@@ -3639,7 +3639,7 @@
             </objects>
             <point key="canvasLocation" x="3047" y="152"/>
         </scene>
-        <!--Observaciones View Controller - Observaciones-->
+        <!--Observaciones-->
         <scene sceneID="vmN-7a-pGV">
             <objects>
                 <viewController id="IHW-Fr-Ixg" customClass="ObservacionesViewController" sceneMemberID="viewController">
@@ -3652,11 +3652,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo.jpg" id="2fz-Xy-ol5">
-                                <rect key="frame" x="7" y="11" width="344" height="66"/>
+                                <rect key="frame" x="7" y="22" width="344" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="STt-nh-gUh">
-                                <rect key="frame" x="33" y="76" width="298" height="49"/>
+                                <rect key="frame" x="33" y="99" width="298" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Clínica especializada en prevención
 y alteraciones de la oclusión</string>
@@ -3664,7 +3664,7 @@ y alteraciones de la oclusión</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" secureTextEntry="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="right" id="lCu-rs-ugU">
-                                <rect key="frame" x="438" y="0.0" width="323" height="32"/>
+                                <rect key="frame" x="424" y="30" width="323" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Dr. Jesús Fernández Sánchez
 </string>
@@ -3672,7 +3672,7 @@ y alteraciones de la oclusión</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" secureTextEntry="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="right" id="rLE-ae-KMa">
-                                <rect key="frame" x="438" y="25" width="323" height="57"/>
+                                <rect key="frame" x="424" y="55" width="323" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Paseo de las Delicias 55 1º dcha, MADRID
 clinica@ortoface.es</string>
@@ -3680,7 +3680,7 @@ clinica@ortoface.es</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" secureTextEntry="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="www.ortoface.com  - " textAlignment="right" id="yOu-ed-dbv">
-                                <rect key="frame" x="501" y="42" width="139" height="33"/>
+                                <rect key="frame" x="487" y="72" width="139" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" secureTextEntry="YES"/>
@@ -3746,7 +3746,7 @@ clinica@ortoface.es</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Escriba aquí las Observaciones que considere más relevantes de su  caso, en cuanto termine pulse en el boton Enviar" id="hD9-gP-tJP">
-                                <rect key="frame" x="20" y="133" width="728" height="32"/>
+                                <rect key="frame" x="20" y="132" width="728" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
@@ -3808,6 +3808,6 @@ clinica@ortoface.es</string>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GVa-i3-TO4"/>
+        <segue reference="ayO-nr-6ig"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -47,7 +47,7 @@
 {
     CGSize imageSize = [[UIScreen mainScreen]bounds].size;
     
-    if (NULL != UIGraphicsBeginImageContextWithOptions)
+    if (NULL != &UIGraphicsBeginImageContextWithOptions)
         UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
     else
         UIGraphicsBeginImageContext(imageSize);
