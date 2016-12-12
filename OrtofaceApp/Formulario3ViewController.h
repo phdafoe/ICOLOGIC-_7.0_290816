@@ -26,67 +26,50 @@
     UIImageView *overlayImageView;
     BOOL scaning;
     
-    IBOutlet UITextField *Nombre_Apnea;
-    IBOutlet UITextField *Apellido_Apnea;
-    IBOutlet UITextField *Fecha_Apnea;
-    IBOutlet UITextField *Direccion_Apnea;
-    IBOutlet UITextField *Numero_Apnea;
-    IBOutlet UITextField *Piso_Apnea;
-    IBOutlet UITextField *Localidad_Apnea;
-    IBOutlet UITextField *CodigoPostal_Apnea;
-    IBOutlet UITextField *Edad_Apnea;
-    IBOutlet UITextField *FechaNacimiento_Apnea;
-    IBOutlet UITextField *TelefonoParticular_Apnea;
-    IBOutlet UITextField *TelefonoMovil_Apnea;
-    IBOutlet UITextField *CorreoElectronico_Apnea;
-    IBOutlet UITextField *QuienHaReferidoConsulta_Apnea;
-    IBOutlet UITextField *ProblemaPrincipal_Apnea;
+    IBOutlet UITextField *ArcoSuperiorIdeal;
+    IBOutlet UITextField *ArcoInferiorideal;
+    IBOutlet UITextField *DientesSeparadosDiastemas;
+    IBOutlet UITextField *ApinamientoDentario;
+    IBOutlet UITextField *FaltaDeDientes;
+    IBOutlet UITextField *AngulacionesOFaltaDeEspacio;
+    IBOutlet UITextField *FaltaDeEspacioParaErupcion;
+    IBOutlet UITextField *DientesIncluidosONoErupcionados;
     
+    IBOutlet UITextField *VistaFrontalIdeal;
+    IBOutlet UITextField *VistaLateralIdeal;
+    IBOutlet UITextField *DientesSuperioresHaciaAfueraVestibularizados;
+    IBOutlet UITextField *MordidaAbiertaAnterior;
+    IBOutlet UITextField *MordidaCruzadaPosterior;
+    IBOutlet UITextField *MandibulaHaciaAtras;
+    IBOutlet UITextField *MandibulaHaciaAfuera;
+    IBOutlet UITextField *PerfilEquilibrado;
     
-    IBOutlet UITextField *Peso_Apnea;
-    IBOutlet UITextField *Talla_Apnea;
+    IBOutlet UITextField *DientesSinEspacioApinados;
+    IBOutlet UITextField *EspacioExcesivo;
+    IBOutlet UITextField *DientesIncluidosORetenidos;
+    IBOutlet UITextField *Sobremordida;
+    IBOutlet UITextField *MordidaAbierta;
+    IBOutlet UITextField *DiscrepanciasEnLasLineasMedidas;
+    IBOutlet UITextField *ArcadaSuperiorEstrecha;
+    IBOutlet UITextField *MordidaCruzadaAnterior;
     
-    IBOutlet UITextField *UstedRocaNo_Apnea;
-    IBOutlet UITextField *UstedRocaSi_Apnea;
-    IBOutlet UITextField *UstedRocaNoSe_Apnea;
+    IBOutlet UITextField *MaxilarSuperiorAdelantadoAlMaxilarInferior;
+    IBOutlet UITextField *MaxilarInferiorAdelantadoAlMaxilarSuperior;
+    IBOutlet UITextField *MolaresInferioreInclinadosHaciaAdentro;
+    IBOutlet UITextField *DientesHaciaAfuera;
+    IBOutlet UITextField *ProblemasDeCrecimiento;
+    IBOutlet UITextField *ProblemasDeLaArticulacionTemperomandibular;
+    IBOutlet UITextField *PerimetroDelArcoDisminuidoPaladar;
     
-    IBOutlet UITextField *IntensidadRonquidoRespiracionX;
-    IBOutlet UITextField *IntensidadRonquidoIgualHablarX;
-    IBOutlet UITextField *IntensidadRonquidoMayorHablarX;
-    IBOutlet UITextField *IntensidadRonquidoMuyFuerteX;
+    IBOutlet UITextField *NoRecomendamosTRatamientoEnEsteMomento;
+    IBOutlet UITextField *PrecisaraTratamientoOrtodoncicoEnElFuturo;
+    IBOutlet UITextField *HaremosOtraRevisionAlPaciente;
+    IBOutlet UITextField *EsPosibleTratamientoAhora;
+    IBOutlet UITextField *RealizarUnasRadiografias;
+    IBOutlet UITextField *VolverAPedirCitaTraerRadiografias;
+    IBOutlet UITextField *CitaParComentarResultados;
+    IBOutlet UITextField *CitaASuDentista;
     
-    IBOutlet UITextField *FrecuenciaRoncaTodosDiasX;
-    IBOutlet UITextField *FrecuenciaRoncaTresCuatroSemanaX;
-    IBOutlet UITextField *FrecuenciaRoncaDosUnoSemanaX;
-    IBOutlet UITextField *FrecuenciaRoncaDosUnoMesX;
-    IBOutlet UITextField *FrecuenciaRoncaNuncaX;
-    
-    IBOutlet UITextField *RonquidoMolestaNo;
-    IBOutlet UITextField *RonquidoMolestaSi;
-    
-    IBOutlet UITextField *PresionAltaNo;
-    IBOutlet UITextField *PresionAltaSi;
-    
-    IBOutlet UITextField *PausaRespiracionTodosDiasX;
-    IBOutlet UITextField *PausaRespiracionTresCuatroSemanaX;
-    IBOutlet UITextField *PausaRespiracionDosUnoSemanaX;
-    IBOutlet UITextField *PausaRespiracionDosUnoMesX;
-    IBOutlet UITextField *PausaRespiracionNuncaX;
-    
-    IBOutlet UITextField *CanzadoLevantarseTodosDiasX;
-    IBOutlet UITextField *CanzadoLevantarseTresCuatroSemanaX;
-    IBOutlet UITextField *CanzadoLevantarseDosUnoSemanaX;
-    IBOutlet UITextField *CanzadoLevantarseDosUnoMesX;
-    IBOutlet UITextField *CanzadoLevantarseNuncaX;
-    
-    IBOutlet UITextField *CanzadoDiaTodosDiasX;
-    IBOutlet UITextField *CanzadoDiaTresCuatroSemanaX;
-    IBOutlet UITextField *CanzadoDiaDosUnoSemanaX;
-    IBOutlet UITextField *CanzadoDiaDosUnoMesX;
-    IBOutlet UITextField *CanzadoDiaNuncaX;
-    
-    IBOutlet UITextField *DormidoVehiculoNo;
-    IBOutlet UITextField *DormidoVehiculoSi;
     
     
 }
@@ -100,68 +83,49 @@
 
 @property (nonatomic, retain) IBOutlet KBF3ScrollView *scrollView;
 
+@property (nonatomic, retain) IBOutlet UITextField *ArcoSuperiorIdeal;
+@property (nonatomic, retain) IBOutlet UITextField *ArcoInferiorideal;
+@property (nonatomic, retain) IBOutlet UITextField *DientesSeparadosDiastemas;
+@property (nonatomic, retain) IBOutlet UITextField *ApinamientoDentario;
+@property (nonatomic, retain) IBOutlet UITextField *FaltaDeDientes;
+@property (nonatomic, retain) IBOutlet UITextField *AngulacionesOFaltaDeEspacio;
+@property (nonatomic, retain) IBOutlet UITextField *FaltaDeEspacioParaErupcion;
+@property (nonatomic, retain) IBOutlet UITextField *DientesIncluidosONoErupcionados;
 
-@property (nonatomic, retain) IBOutlet UITextField *Nombre_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Apellido_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Fecha_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Direccion_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Numero_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Piso_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Localidad_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *CodigoPostal_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Edad_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *FechaNacimiento_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *TelefonoParticular_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *TelefonoMovil_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *CorreoElectronico_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *QuienHaReferidoConsulta_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *ProblemaPrincipal_Apnea;
+@property (nonatomic, retain) IBOutlet UITextField *VistaFrontalIdeal;
+@property (nonatomic, retain) IBOutlet UITextField *VistaLateralIdeal;
+@property (nonatomic, retain) IBOutlet UITextField *DientesSuperioresHaciaAfueraVestibularizados;
+@property (nonatomic, retain) IBOutlet UITextField *MordidaAbiertaAnterior;
+@property (nonatomic, retain) IBOutlet UITextField *MordidaCruzadaPosterior;
+@property (nonatomic, retain) IBOutlet UITextField *MandibulaHaciaAtras;
+@property (nonatomic, retain) IBOutlet UITextField *MandibulaHaciaAfuera;
+@property (nonatomic, retain) IBOutlet UITextField *PerfilEquilibrado;
 
+@property (nonatomic, retain) IBOutlet UITextField *DientesSinEspacioApinados;
+@property (nonatomic, retain) IBOutlet UITextField *EspacioExcesivo;
+@property (nonatomic, retain) IBOutlet UITextField *DientesIncluidosORetenidos;
+@property (nonatomic, retain) IBOutlet UITextField *Sobremordida;
+@property (nonatomic, retain) IBOutlet UITextField *MordidaAbierta;
+@property (nonatomic, retain) IBOutlet UITextField *DiscrepanciasEnLasLineasMedidas;
+@property (nonatomic, retain) IBOutlet UITextField *ArcadaSuperiorEstrecha;
+@property (nonatomic, retain) IBOutlet UITextField *MordidaCruzadaAnterior;
 
-@property (nonatomic, retain) IBOutlet UITextField *Peso_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *Talla_Apnea;
+@property (nonatomic, retain) IBOutlet UITextField *MaxilarSuperiorAdelantadoAlMaxilarInferior;
+@property (nonatomic, retain) IBOutlet UITextField *MaxilarInferiorAdelantadoAlMaxilarSuperior;
+@property (nonatomic, retain) IBOutlet UITextField *MolaresInferioreInclinadosHaciaAdentro;
+@property (nonatomic, retain) IBOutlet UITextField *DientesHaciaAfuera;
+@property (nonatomic, retain) IBOutlet UITextField *ProblemasDeCrecimiento;
+@property (nonatomic, retain) IBOutlet UITextField *ProblemasDeLaArticulacionTemperomandibular;
+@property (nonatomic, retain) IBOutlet UITextField *PerimetroDelArcoDisminuidoPaladar;
 
-@property (nonatomic, retain) IBOutlet UITextField *UstedRocaNo_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *UstedRocaSi_Apnea;
-@property (nonatomic, retain) IBOutlet UITextField *UstedRocaNoSe_Apnea;
-
-@property (nonatomic, retain) IBOutlet UITextField *IntensidadRonquidoRespiracionX;
-@property (nonatomic, retain) IBOutlet UITextField *IntensidadRonquidoIgualHablarX;
-@property (nonatomic, retain) IBOutlet UITextField *IntensidadRonquidoMayorHablarX;
-@property (nonatomic, retain) IBOutlet UITextField *IntensidadRonquidoMuyFuerteX;
-
-@property (nonatomic, retain) IBOutlet UITextField *FrecuenciaRoncaTodosDiasX;
-@property (nonatomic, retain) IBOutlet UITextField *FrecuenciaRoncaTresCuatroSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *FrecuenciaRoncaDosUnoSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *FrecuenciaRoncaDosUnoMesX;
-@property (nonatomic, retain) IBOutlet UITextField *FrecuenciaRoncaNuncaX;
-
-@property (nonatomic, retain) IBOutlet UITextField *RonquidoMolestaNo;
-@property (nonatomic, retain) IBOutlet UITextField *RonquidoMolestaSi;
-
-@property (nonatomic, retain) IBOutlet UITextField *PresionAltaNo;
-@property (nonatomic, retain) IBOutlet UITextField *PresionAltaSi;
-
-@property (nonatomic, retain) IBOutlet UITextField *PausaRespiracionTodosDiasX;
-@property (nonatomic, retain) IBOutlet UITextField *PausaRespiracionTresCuatroSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *PausaRespiracionDosUnoSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *PausaRespiracionDosUnoMesX;
-@property (nonatomic, retain) IBOutlet UITextField *PausaRespiracionNuncaX;
-
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoLevantarseTodosDiasX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoLevantarseTresCuatroSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoLevantarseDosUnoSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoLevantarseDosUnoMesX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoLevantarseNuncaX;
-
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoDiaTodosDiasX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoDiaTresCuatroSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoDiaDosUnoSemanaX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoDiaDosUnoMesX;
-@property (nonatomic, retain) IBOutlet UITextField *CanzadoDiaNuncaX;
-
-@property (nonatomic, retain) IBOutlet UITextField *DormidoVehiculoNo;
-@property (nonatomic, retain) IBOutlet UITextField *DormidoVehiculoSi;
+@property (nonatomic, retain) IBOutlet UITextField *NoRecomendamosTRatamientoEnEsteMomento;
+@property (nonatomic, retain) IBOutlet UITextField *PrecisaraTratamientoOrtodoncicoEnElFuturo;
+@property (nonatomic, retain) IBOutlet UITextField *HaremosOtraRevisionAlPaciente;
+@property (nonatomic, retain) IBOutlet UITextField *EsPosibleTratamientoAhora;
+@property (nonatomic, retain) IBOutlet UITextField *RealizarUnasRadiografias;
+@property (nonatomic, retain) IBOutlet UITextField *VolverAPedirCitaTraerRadiografias;
+@property (nonatomic, retain) IBOutlet UITextField *CitaParComentarResultados;
+@property (nonatomic, retain) IBOutlet UITextField *CitaASuDentista;
 
 // acciones de salvado y recarga de datos del formulario
 
@@ -173,66 +137,49 @@
 
 -(IBAction)getUIKitScreeshot;
 
--(IBAction)dismisseNombre_Apnea:(id)sender;
--(IBAction)dismisseApellido_Apnea:(id)sender;
--(IBAction)dismisseFecha_Apnea:(id)sender;
--(IBAction)dismisseDireccion_Apnea:(id)sender;
--(IBAction)dismisseNumero_Apnea:(id)sender;
--(IBAction)dismissePiso_Apnea:(id)sender;
--(IBAction)dismisseLocalidad_Apnea:(id)sender;
--(IBAction)dismisseCodigoPostal_Apnea:(id)sender;
--(IBAction)dismisseEdad_Apnea:(id)sender;
--(IBAction)dismisseFechaNacimiento_Apnea:(id)sender;
--(IBAction)dismisseTelefonoParticular_Apnea:(id)sender;
--(IBAction)dismisseTelefonoMovil_Apnea:(id)sender;
--(IBAction)dismisseCorreoElectronico_Apnea:(id)sender;
--(IBAction)dismisseQuienHaReferidoConsulta_Apnea:(id)sender;
--(IBAction)dismisseProblemaPrincipal_Apnea:(id)sender;
+-(IBAction)dismisseArcoSuperiorIdeal:(id)sender;
+-(IBAction)dismisseArcoInferiorideal:(id)sender;
+-(IBAction)dismisseDientesSeparadosDiastemas:(id)sender;
+-(IBAction)dismisseApinamientoDentario:(id)sender;
+-(IBAction)dismisseFaltaDeDientes:(id)sender;
+-(IBAction)dismisseAngulacionesOFaltaDeEspacio:(id)sender;
+-(IBAction)dismisseFaltaDeEspacioParaErupcion:(id)sender;
+-(IBAction)dismisseDientesIncluidosONoErupcionados:(id)sender;
 
--(IBAction)dismissePeso_Apnea:(id)sender;
--(IBAction)dismisseTalla_Apnea:(id)sender;
+-(IBAction)dismisseVistaFrontalIdeal:(id)sender;
+-(IBAction)dismisseVistaLateralIdeal:(id)sender;
+-(IBAction)dismisseDientesSuperioresHaciaAfueraVestibularizados:(id)sender;
+-(IBAction)dismisseMordidaAbiertaAnterior:(id)sender;
+-(IBAction)dismisseMordidaCruzadaPosterior:(id)sender;
+-(IBAction)dismisseMandibulaHaciaAtras:(id)sender;
+-(IBAction)dismissePerfilEquilibrado:(id)sender;
+-(IBAction)dismisseMandibulaHaciaAfuera:(id)sender;
 
--(IBAction)dismisseUstedRocaNo_Apnea:(id)sender;
--(IBAction)dismisseUstedRocaSi_Apnea:(id)sender;
--(IBAction)dismisseUstedRocaNoSe_Apnea:(id)sender;
+-(IBAction)dismisseDientesSinEspacioApinados:(id)sender;
+-(IBAction)dismisseEspacioExcesivo:(id)sender;
+-(IBAction)dismisseDientesIncluidosORetenidos:(id)sender;
+-(IBAction)dismisseSobremordida:(id)sender;
+-(IBAction)dismisseMordidaAbierta:(id)sender;
+-(IBAction)dismisseDiscrepanciasEnLasLineasMedidas:(id)sender;
+-(IBAction)dismisseArcadaSuperiorEstrecha:(id)sender;
+-(IBAction)dismisseMordidaCruzadaAnterior:(id)sender;
 
--(IBAction)dismisseIntensidadRonquidoRespiracionX:(id)sender;
--(IBAction)dismisseIntensidadRonquidoIgualHablarX:(id)sender;
--(IBAction)dismisseIntensidadRonquidoMayorHablarX:(id)sender;
--(IBAction)dismisseIntensidadRonquidoMuyFuerteX:(id)sender;
+-(IBAction)dismisseMaxilarSuperiorAdelantadoAlMaxilarInferior:(id)sender;
+-(IBAction)dismisseMaxilarInferiorAdelantadoAlMaxilarSuperior:(id)sender;
+-(IBAction)dismisseMolaresInferioreInclinadosHaciaAdentro:(id)sender;
+-(IBAction)dismisseDientesHaciaAfuera:(id)sender;
+-(IBAction)dismisseProblemasDeCrecimiento:(id)sender;
+-(IBAction)dismisseProblemasDeLaArticulacionTemperomandibular:(id)sender;
+-(IBAction)dismissePerimetroDelArcoDisminuidoPaladar:(id)sender;
 
--(IBAction)dismisseFrecuenciaRoncaTodosDiasX:(id)sender;
--(IBAction)dismisseFrecuenciaRoncaTresCuatroSemanaX:(id)sender;
--(IBAction)dismisseFrecuenciaRoncaDosUnoSemanaX:(id)sender;
--(IBAction)dismisseFrecuenciaRoncaDosUnoMesX:(id)sender;
--(IBAction)dismisseFrecuenciaRoncaNuncaX:(id)sender;
+-(IBAction)dismisseNoRecomendamosTRatamientoEnEsteMomento:(id)sender;
+-(IBAction)dismissePrecisaraTratamientoOrtodoncicoEnElFuturo:(id)sender;
+-(IBAction)dismisseHaremosOtraRevisionAlPaciente:(id)sender;
+-(IBAction)dismisseEsPosibleTratamientoAhora:(id)sender;
+-(IBAction)dismisseRealizarUnasRadiografias:(id)sender;
+-(IBAction)dismisseVolverAPedirCitaTraerRadiografias:(id)sender;
+-(IBAction)dismisseCitaASuDentista:(id)sender;
 
--(IBAction)dismisseRonquidoMolestaNo:(id)sender;
--(IBAction)dismisseRonquidoMolestaSi:(id)sender;
-
--(IBAction)dismissePresionAltaNo:(id)sender;
--(IBAction)dismissePresionAltaSi:(id)sender;
-
--(IBAction)dismissePausaRespiracionTodosDiasX:(id)sender;
--(IBAction)dismissePausaRespiracionTresCuatroSemanaX:(id)sender;
--(IBAction)dismissePausaRespiracionDosUnoSemanaX:(id)sender;
--(IBAction)dismissePausaRespiracionDosUnoMesX:(id)sender;
--(IBAction)dismissePausaRespiracionNuncaX:(id)sender;
-
--(IBAction)dismisseCanzadoLevantarseTodosDiasX:(id)sender;
--(IBAction)dismisseCanzadoLevantarseTresCuatroSemanaX:(id)sender;
--(IBAction)dismisseCanzadoLevantarseDosUnoSemanaX:(id)sender;
--(IBAction)dismisseCanzadoLevantarseDosUnoMesX:(id)sender;
--(IBAction)dismisseCanzadoLevantarseNuncaX:(id)sender;
-
--(IBAction)dismisseCanzadoDiaTodosDiasX:(id)sender;
--(IBAction)dismisseCanzadoDiaTresCuatroSemanaX:(id)sender;
--(IBAction)dismisseCanzadoDiaDosUnoSemanaX:(id)sender;
--(IBAction)dismisseCanzadoDiaDosUnoMesX:(id)sender;
--(IBAction)dismisseCanzadoDiaNuncaX:(id)sender;
-
--(IBAction)dismisseDormidoVehiculoNo:(id)sender;
--(IBAction)dismisseDormidoVehiculoSi:(id)sender;
 
 //propiedades que permiten obtener datso de nombre y apellido y enviaro a la vista de firma
 

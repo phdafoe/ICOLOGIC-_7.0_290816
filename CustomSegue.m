@@ -15,7 +15,8 @@
 {
     //nueva pagina
     
-    [self.sourceViewController presentModalViewController:self.destinationViewController animated:YES];
+    [self.sourceViewController presentViewController:self.destinationViewController animated:YES completion:nil];
+    
     
 }
 

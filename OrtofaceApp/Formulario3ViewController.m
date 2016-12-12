@@ -19,22 +19,22 @@
 @implementation Formulario3ViewController
 
 
-@synthesize Nombre_Apnea, Apellido_Apnea, Fecha_Apnea, Direccion_Apnea, Numero_Apnea, Piso_Apnea, Localidad_Apnea, CodigoPostal_Apnea, Edad_Apnea, FechaNacimiento_Apnea, TelefonoMovil_Apnea, TelefonoParticular_Apnea, CorreoElectronico_Apnea, QuienHaReferidoConsulta_Apnea, ProblemaPrincipal_Apnea, Peso_Apnea, Talla_Apnea, UstedRocaNo_Apnea, UstedRocaSi_Apnea, UstedRocaNoSe_Apnea,IntensidadRonquidoIgualHablarX, IntensidadRonquidoMayorHablarX, IntensidadRonquidoMuyFuerteX, IntensidadRonquidoRespiracionX, FrecuenciaRoncaDosUnoMesX, FrecuenciaRoncaDosUnoSemanaX, FrecuenciaRoncaNuncaX, FrecuenciaRoncaTodosDiasX, FrecuenciaRoncaTresCuatroSemanaX, RonquidoMolestaNo, RonquidoMolestaSi, PresionAltaNo, PresionAltaSi, PausaRespiracionDosUnoMesX, PausaRespiracionDosUnoSemanaX, PausaRespiracionNuncaX, PausaRespiracionTodosDiasX, PausaRespiracionTresCuatroSemanaX, CanzadoDiaDosUnoMesX, CanzadoDiaDosUnoSemanaX, CanzadoDiaNuncaX, CanzadoDiaTodosDiasX, CanzadoDiaTresCuatroSemanaX, CanzadoLevantarseDosUnoMesX, CanzadoLevantarseDosUnoSemanaX, CanzadoLevantarseNuncaX, CanzadoLevantarseTodosDiasX, CanzadoLevantarseTresCuatroSemanaX, DormidoVehiculoNo, DormidoVehiculoSi, scrollView;
+@synthesize ArcoSuperiorIdeal, ArcoInferiorideal, DientesSeparadosDiastemas, ApinamientoDentario, FaltaDeDientes, AngulacionesOFaltaDeEspacio, FaltaDeEspacioParaErupcion, DientesIncluidosONoErupcionados, VistaFrontalIdeal, VistaLateralIdeal, DientesSuperioresHaciaAfueraVestibularizados, MordidaAbiertaAnterior, MordidaCruzadaPosterior, MandibulaHaciaAtras, MandibulaHaciaAfuera, PerfilEquilibrado, DientesSinEspacioApinados, EspacioExcesivo, DientesIncluidosORetenidos, Sobremordida, MordidaAbierta, DiscrepanciasEnLasLineasMedidas, ArcadaSuperiorEstrecha, MordidaCruzadaAnterior, MaxilarSuperiorAdelantadoAlMaxilarInferior, MaxilarInferiorAdelantadoAlMaxilarSuperior, MolaresInferioreInclinadosHaciaAdentro, DientesHaciaAfuera, ProblemasDeCrecimiento, ProblemasDeLaArticulacionTemperomandibular, PerimetroDelArcoDisminuidoPaladar, NoRecomendamosTRatamientoEnEsteMomento, PrecisaraTratamientoOrtodoncicoEnElFuturo, HaremosOtraRevisionAlPaciente, EsPosibleTratamientoAhora, RealizarUnasRadiografias, VolverAPedirCitaTraerRadiografias, CitaParComentarResultados, CitaASuDentista;
 
 
-@synthesize overlayImageView, backgroundImageView, screenshotImage,screenPictureView,screenPictureLabel,screenPictureImageView;
 
+@synthesize overlayImageView, backgroundImageView, screenshotImage,screenPictureView,screenPictureLabel,screenPictureImageView, scrollView;
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"First to second"])
     {
-        self.messageNombre_Apnea = Nombre_Apnea.text;
+        /*self.messageNombre_Apnea = Nombre_Apnea.text;
         self.messageApellido_Apnea = Apellido_Apnea.text;
         FirmaDigital_Apnea_ViewController *targetVC = [segue destinationViewController];
         targetVC.messageNombre_Apnea = self.messageNombre_Apnea;
-        targetVC.messageApellido_Apnea = self.messageApellido_Apnea;
+        targetVC.messageApellido_Apnea = self.messageApellido_Apnea;*/
     }
 }
 
@@ -50,255 +50,201 @@
     [defaultsObservaciones_Apnea setObject:enviaStringObservaciones_Apnea forKey:@"enviaStringObservaciones_Apnea"];
     [defaultsObservaciones_Apnea synchronize];
     
-    NSString *enviaNombre_Apnea = Nombre_Apnea.text;
-    NSUserDefaults *defaultsNombre_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsNombre_Apnea setObject:enviaNombre_Apnea forKey:@"enviaStringNombre_Apnea"];
-    [defaultsNombre_Apnea synchronize];
+    NSString *enviaArcoSuperiorIdeal = ArcoSuperiorIdeal.text;
+    NSUserDefaults *defaultsArcoSuperiorIdeal = [NSUserDefaults standardUserDefaults];
+    [defaultsArcoSuperiorIdeal setObject:enviaArcoSuperiorIdeal forKey:@"enviaArcoSuperiorIdeal"];
+    [defaultsArcoSuperiorIdeal synchronize];
     
-    NSString *enviaApellido_Apnea = Apellido_Apnea.text;
-    NSUserDefaults *defaultsApellido_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsApellido_Apnea setObject:enviaApellido_Apnea forKey:@"enviaStringApellido_Apnea"];
-    [defaultsApellido_Apnea synchronize];
+    NSString *enviaArcoInferiorideal = ArcoInferiorideal.text;
+    NSUserDefaults *defaultsArcoInferiorideal = [NSUserDefaults standardUserDefaults];
+    [defaultsArcoInferiorideal setObject:enviaArcoInferiorideal forKey:@"enviaArcoInferiorideal"];
+    [defaultsArcoInferiorideal synchronize];
     
-    NSString *enviaFecha_Apnea = Fecha_Apnea.text;
-    NSUserDefaults *defaultsFecha_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsFecha_Apnea setObject:enviaFecha_Apnea forKey:@"enviaStringFecha_Apnea"];
-    [defaultsFecha_Apnea synchronize];
+    NSString *enviaDientesSeparadosDiastemas = DientesSeparadosDiastemas.text;
+    NSUserDefaults *defaultsDientesSeparadosDiastemas = [NSUserDefaults standardUserDefaults];
+    [defaultsDientesSeparadosDiastemas setObject:enviaDientesSeparadosDiastemas forKey:@"enviaDientesSeparadosDiastemas"];
+    [defaultsDientesSeparadosDiastemas synchronize];
     
-    NSString *enviaDireccion_Apnea = Direccion_Apnea.text;
-    NSUserDefaults *defaultsDireccion_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsDireccion_Apnea setObject:enviaDireccion_Apnea forKey:@"enviaStringDireccion_Apnea"];
-    [defaultsDireccion_Apnea synchronize];
+    NSString *enviaApinamientoDentario = ApinamientoDentario.text;
+    NSUserDefaults *defaultsApinamientoDentario = [NSUserDefaults standardUserDefaults];
+    [defaultsApinamientoDentario setObject:enviaApinamientoDentario forKey:@"enviaApinamientoDentario"];
+    [defaultsApinamientoDentario synchronize];
     
-    NSString *enviaNumero_Apnea = Numero_Apnea.text;
-    NSUserDefaults *defaultsNumero_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsNumero_Apnea setObject:enviaNumero_Apnea forKey:@"enviaStringNumero_Apnea"];
-    [defaultsNumero_Apnea synchronize];
+    NSString *enviaFaltaDeDientes = FaltaDeDientes.text;
+    NSUserDefaults *defaultsFaltaDeDientes = [NSUserDefaults standardUserDefaults];
+    [defaultsFaltaDeDientes setObject:enviaFaltaDeDientes forKey:@"enviaFaltaDeDientes"];
+    [defaultsFaltaDeDientes synchronize];
     
-    NSString *enviaPiso_Apnea = Piso_Apnea.text;
-    NSUserDefaults *defaultsPiso_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsPiso_Apnea setObject:enviaPiso_Apnea forKey:@"enviaStringPiso_Apnea"];
-    [defaultsPiso_Apnea synchronize];
+    NSString *enviaAngulacionesOFaltaDeEspacio = AngulacionesOFaltaDeEspacio.text;
+    NSUserDefaults *defaultsAngulacionesOFaltaDeEspacio = [NSUserDefaults standardUserDefaults];
+    [defaultsAngulacionesOFaltaDeEspacio setObject:enviaAngulacionesOFaltaDeEspacio forKey:@"enviaAngulacionesOFaltaDeEspacio"];
+    [defaultsAngulacionesOFaltaDeEspacio synchronize];
     
-    NSString *enviaLocalidad_Apnea = Localidad_Apnea.text;
-    NSUserDefaults *defaultsLocalidad_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsLocalidad_Apnea setObject:enviaLocalidad_Apnea forKey:@"enviaStringLocalidad_Apnea"];
-    [defaultsLocalidad_Apnea synchronize];
+    NSString *enviaFaltaDeEspacioParaErupcion = FaltaDeEspacioParaErupcion.text;
+    NSUserDefaults *defaultsFaltaDeEspacioParaErupcion = [NSUserDefaults standardUserDefaults];
+    [defaultsFaltaDeEspacioParaErupcion setObject:enviaFaltaDeEspacioParaErupcion forKey:@"enviaFaltaDeEspacioParaErupcion"];
+    [defaultsFaltaDeEspacioParaErupcion synchronize];
     
-    NSString *enviaCodigoPostal_Apnea = CodigoPostal_Apnea.text;
-    NSUserDefaults *defaultsCodigoPostal_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsCodigoPostal_Apnea setObject:enviaCodigoPostal_Apnea forKey:@"enviaStringCodigoPostal_Apnea"];
-    [defaultsCodigoPostal_Apnea synchronize];
+    NSString *enviaDientesIncluidosONoErupcionados = DientesIncluidosONoErupcionados.text;
+    NSUserDefaults *defaultsDientesIncluidosONoErupcionados = [NSUserDefaults standardUserDefaults];
+    [defaultsDientesIncluidosONoErupcionados setObject:enviaDientesIncluidosONoErupcionados forKey:@"enviaSDientesIncluidosONoErupcionados"];
+    [defaultsDientesIncluidosONoErupcionados synchronize];
     
-    NSString *enviaEdad_Apnea = Edad_Apnea.text;
-    NSUserDefaults *defaultsEdad_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsEdad_Apnea setObject:enviaEdad_Apnea forKey:@"enviaStringEdad_Apnea"];
-    [defaultsEdad_Apnea synchronize];
+    NSString *enviaVistaFrontalIdeal = VistaFrontalIdeal.text;
+    NSUserDefaults *defaultsVistaFrontalIdeal = [NSUserDefaults standardUserDefaults];
+    [defaultsVistaFrontalIdeal setObject:enviaVistaFrontalIdeal forKey:@"enviaVistaFrontalIdeal"];
+    [defaultsVistaFrontalIdeal synchronize];
     
-    NSString *enviaFechaNacimiento_Apnea = FechaNacimiento_Apnea.text;
-    NSUserDefaults *defaultsFechaNacimiento_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsFechaNacimiento_Apnea setObject:enviaFechaNacimiento_Apnea forKey:@"enviaStringFechaNacimiento_Apnea"];
-    [defaultsFechaNacimiento_Apnea synchronize];
+    NSString *enviaVistaLateralIdeal = VistaLateralIdeal.text;
+    NSUserDefaults *defaultsVistaLateralIdeal = [NSUserDefaults standardUserDefaults];
+    [defaultsVistaLateralIdeal setObject:enviaVistaLateralIdeal forKey:@"enviaVistaLateralIdeal"];
+    [defaultsVistaLateralIdeal synchronize];
     
-    NSString *enviaTelefonoParticular_Apnea = TelefonoParticular_Apnea.text;
-    NSUserDefaults *defaultsTelefonoParticular_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsTelefonoParticular_Apnea setObject:enviaTelefonoParticular_Apnea forKey:@"enviaStringTelefonoParticular_Apnea"];
-    [defaultsTelefonoParticular_Apnea synchronize];
+    NSString *enviaDientesSuperioresHaciaAfueraVestibularizados = DientesSuperioresHaciaAfueraVestibularizados.text;
+    NSUserDefaults *defaultsSuperioresHaciaAfueraVestibularizados = [NSUserDefaults standardUserDefaults];
+    [defaultsSuperioresHaciaAfueraVestibularizados setObject:enviaDientesSuperioresHaciaAfueraVestibularizados forKey:@"enviaDientesSuperioresHaciaAfueraVestibularizados"];
+    [defaultsSuperioresHaciaAfueraVestibularizados synchronize];
     
-    NSString *enviaTelefonoMovil_Apnea = TelefonoMovil_Apnea.text;
-    NSUserDefaults *defaultsTelefonoMovil_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsTelefonoMovil_Apnea setObject:enviaTelefonoMovil_Apnea forKey:@"enviaStringTelefonoMovil_Apnea"];
-    [defaultsTelefonoMovil_Apnea synchronize];
+    NSString *enviaMordidaAbiertaAnterior = MordidaAbiertaAnterior.text;
+    NSUserDefaults *defaultsMordidaAbiertaAnterior = [NSUserDefaults standardUserDefaults];
+    [defaultsMordidaAbiertaAnterior setObject:enviaMordidaAbiertaAnterior forKey:@"enviaMordidaAbiertaAnterior"];
+    [defaultsMordidaAbiertaAnterior synchronize];
     
-    NSString *enviaCorreoElectronico_Apnea = CorreoElectronico_Apnea.text;
-    NSUserDefaults *defaultsCorreoElectronico_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsCorreoElectronico_Apnea setObject:enviaCorreoElectronico_Apnea forKey:@"enviaStringCorreoElectronico_Apnea"];
-    [defaultsCorreoElectronico_Apnea synchronize];
+    NSString *enviaMordidaCruzadaPosterior = MordidaCruzadaPosterior.text;
+    NSUserDefaults *defaultsMordidaCruzadaPosterior = [NSUserDefaults standardUserDefaults];
+    [defaultsMordidaCruzadaPosterior setObject:enviaMordidaCruzadaPosterior forKey:@"enviaMordidaCruzadaPosterior"];
+    [defaultsMordidaCruzadaPosterior synchronize];
     
-    NSString *enviaQuienHaReferidoConsulta_Apnea = QuienHaReferidoConsulta_Apnea.text;
-    NSUserDefaults *defaultsQuienHaReferidoConsulta_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsQuienHaReferidoConsulta_Apnea setObject:enviaQuienHaReferidoConsulta_Apnea forKey:@"enviaStringQuienHaReferidoConsulta_Apnea"];
-    [defaultsQuienHaReferidoConsulta_Apnea synchronize];
+    NSString *enviaMandibulaHaciaAtras = MandibulaHaciaAtras.text;
+    NSUserDefaults *defaultsMandibulaHaciaAtras = [NSUserDefaults standardUserDefaults];
+    [defaultsMandibulaHaciaAtras setObject:enviaMandibulaHaciaAtras forKey:@"enviaMandibulaHaciaAtras"];
+    [defaultsMandibulaHaciaAtras synchronize];
     
-    NSString *enviaProblemaPrincipal_Apnea = ProblemaPrincipal_Apnea.text;
-    NSUserDefaults *defaultsProblemaPrincipal_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsProblemaPrincipal_Apnea setObject:enviaProblemaPrincipal_Apnea forKey:@"enviaStringProblemaPrincipal_Apnea"];
-    [defaultsProblemaPrincipal_Apnea synchronize];
+    NSString *enviaMandibulaHaciaAfuera = MandibulaHaciaAfuera.text;
+    NSUserDefaults *defaultsMandibulaHaciaAfuera = [NSUserDefaults standardUserDefaults];
+    [defaultsMandibulaHaciaAfuera setObject:enviaMandibulaHaciaAfuera forKey:@"enviaMandibulaHaciaAfuera"];
+    [defaultsMandibulaHaciaAfuera synchronize];
     
-    NSString *enviaPeso_Apnea = Peso_Apnea.text;
-    NSUserDefaults *defaultsPeso_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsPeso_Apnea setObject:enviaPeso_Apnea forKey:@"enviaStringPeso_Apnea"];
-    [defaultsPeso_Apnea synchronize];
+    NSString *enviaPerfilEquilibrado = PerfilEquilibrado.text;
+    NSUserDefaults *defaultsPerfilEquilibrado = [NSUserDefaults standardUserDefaults];
+    [defaultsPerfilEquilibrado setObject:enviaPerfilEquilibrado forKey:@"enviaPerfilEquilibrado"];
+    [defaultsPerfilEquilibrado synchronize];
     
-    NSString *enviaTalla_Apnea = Talla_Apnea.text;
-    NSUserDefaults *defaultsTalla_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsTalla_Apnea setObject:enviaTalla_Apnea forKey:@"enviaStringTalla_Apnea"];
-    [defaultsTalla_Apnea synchronize];
+    NSString *enviaDientesSinEspacioApinados = DientesSinEspacioApinados.text;
+    NSUserDefaults *defaultsDientesSinEspacioApinados = [NSUserDefaults standardUserDefaults];
+    [defaultsDientesSinEspacioApinados setObject:enviaDientesSinEspacioApinados forKey:@"enviaDientesSinEspacioApinados"];
+    [defaultsDientesSinEspacioApinados synchronize];
     
-    NSString *enviaUstedRocaNo_Apnea = UstedRocaNo_Apnea.text;
-    NSUserDefaults *defaultsUstedRocaNo_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsUstedRocaNo_Apnea setObject:enviaUstedRocaNo_Apnea forKey:@"enviaStringUstedRocaNo_Apnea"];
-    [defaultsUstedRocaNo_Apnea synchronize];
+    NSString *enviaEspacioExcesivo = EspacioExcesivo.text;
+    NSUserDefaults *defaultsEspacioExcesivo = [NSUserDefaults standardUserDefaults];
+    [defaultsEspacioExcesivo setObject:enviaEspacioExcesivo forKey:@"enviaEspacioExcesivo"];
+    [defaultsEspacioExcesivo synchronize];
     
-    NSString *enviaUstedRocaSi_Apnea = UstedRocaSi_Apnea.text;
-    NSUserDefaults *defaultsUstedRocaSi_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsUstedRocaSi_Apnea setObject:enviaUstedRocaSi_Apnea forKey:@"enviaStringUstedRocaSi_Apnea"];
-    [defaultsUstedRocaSi_Apnea synchronize];
+    NSString *enviaDientesIncluidosORetenidos = DientesIncluidosORetenidos.text;
+    NSUserDefaults *defaultsDientesIncluidosORetenidos = [NSUserDefaults standardUserDefaults];
+    [defaultsDientesIncluidosORetenidos setObject:enviaDientesIncluidosORetenidos forKey:@"enviaDientesIncluidosORetenidos"];
+    [defaultsDientesIncluidosORetenidos synchronize];
     
-    NSString *enviaUstedRocaNoSe_Apnea = UstedRocaNoSe_Apnea.text;
-    NSUserDefaults *defaultsUstedRocaNoSe_Apnea = [NSUserDefaults standardUserDefaults];
-    [defaultsUstedRocaNoSe_Apnea setObject:enviaUstedRocaNoSe_Apnea forKey:@"enviaStringUstedRocaNoSe_Apnea"];
-    [defaultsUstedRocaNoSe_Apnea synchronize];
+    NSString *enviaSobremordida = Sobremordida.text;
+    NSUserDefaults *defaultsSobremordida = [NSUserDefaults standardUserDefaults];
+    [defaultsSobremordida setObject:enviaSobremordida forKey:@"enviaSobremordida"];
+    [defaultsSobremordida synchronize];
     
-    NSString *enviaIntensidadRonquidoRespiracionX = IntensidadRonquidoRespiracionX.text;
-    NSUserDefaults *defaultsIntensidadRonquidoRespiracionX = [NSUserDefaults standardUserDefaults];
-    [defaultsIntensidadRonquidoRespiracionX setObject:enviaIntensidadRonquidoRespiracionX forKey:@"enviaStringIntensidadRonquidoRespiracionX"];
-    [defaultsIntensidadRonquidoRespiracionX synchronize];
+    NSString *enviaMordidaAbierta = MordidaAbierta.text;
+    NSUserDefaults *defaultsMordidaAbierta = [NSUserDefaults standardUserDefaults];
+    [defaultsMordidaAbierta setObject:enviaMordidaAbierta forKey:@"enviaMordidaAbierta"];
+    [defaultsMordidaAbierta synchronize];
     
-    NSString *enviaIntensidadRonquidoIgualHablarX = IntensidadRonquidoIgualHablarX.text;
-    NSUserDefaults *defaultsIntensidadRonquidoIgualHablarX = [NSUserDefaults standardUserDefaults];
-    [defaultsIntensidadRonquidoIgualHablarX setObject:enviaIntensidadRonquidoIgualHablarX forKey:@"enviaStringIntensidadRonquidoIgualHablarX"];
-    [defaultsIntensidadRonquidoIgualHablarX synchronize];
+    NSString *enviaDiscrepanciasEnLasLineasMedidas = DiscrepanciasEnLasLineasMedidas.text;
+    NSUserDefaults *defaultsDiscrepanciasEnLasLineasMedidas = [NSUserDefaults standardUserDefaults];
+    [defaultsDiscrepanciasEnLasLineasMedidas setObject:enviaDiscrepanciasEnLasLineasMedidas forKey:@"enviaDiscrepanciasEnLasLineasMedidas"];
+    [defaultsDiscrepanciasEnLasLineasMedidas synchronize];
     
-    NSString *enviaIntensidadRonquidoMayorHablarX = IntensidadRonquidoMayorHablarX.text;
-    NSUserDefaults *defaultsIntensidadRonquidoMayorHablarX = [NSUserDefaults standardUserDefaults];
-    [defaultsIntensidadRonquidoMayorHablarX setObject:enviaIntensidadRonquidoMayorHablarX forKey:@"enviaStringIntensidadRonquidoMayorHablarX"];
-    [defaultsIntensidadRonquidoMayorHablarX synchronize];
+    NSString *enviaArcadaSuperiorEstrecha = ArcadaSuperiorEstrecha.text;
+    NSUserDefaults *defaultsArcadaSuperiorEstrecha = [NSUserDefaults standardUserDefaults];
+    [defaultsArcadaSuperiorEstrecha setObject:enviaArcadaSuperiorEstrecha forKey:@"enviaArcadaSuperiorEstrecha"];
+    [defaultsArcadaSuperiorEstrecha synchronize];
     
-    NSString *enviaIntensidadRonquidoMuyFuerteX = IntensidadRonquidoMuyFuerteX.text;
-    NSUserDefaults *defaultsIntensidadRonquidoMuyFuerteX = [NSUserDefaults standardUserDefaults];
-    [defaultsIntensidadRonquidoMuyFuerteX setObject:enviaIntensidadRonquidoMuyFuerteX forKey:@"enviaStringIntensidadRonquidoMuyFuerteX"];
-    [defaultsIntensidadRonquidoMuyFuerteX synchronize];
+    NSString *enviaMordidaCruzadaAnterior = MordidaCruzadaAnterior.text;
+    NSUserDefaults *defaultsMordidaCruzadaAnterior = [NSUserDefaults standardUserDefaults];
+    [defaultsMordidaCruzadaAnterior setObject:enviaMordidaCruzadaAnterior forKey:@"enviaMordidaCruzadaAnterior"];
+    [defaultsMordidaCruzadaAnterior synchronize];
     
-    NSString *enviaFrecuenciaRoncaTodosDiasX = FrecuenciaRoncaTodosDiasX.text;
-    NSUserDefaults *defaultsFrecuenciaRoncaTodosDiasX = [NSUserDefaults standardUserDefaults];
-    [defaultsFrecuenciaRoncaTodosDiasX setObject:enviaFrecuenciaRoncaTodosDiasX forKey:@"enviaStringFrecuenciaRoncaTodosDiasX"];
-    [defaultsFrecuenciaRoncaTodosDiasX synchronize];
+    NSString *enviaMaxilarSuperiorAdelantadoAlMaxilarInferior = MaxilarSuperiorAdelantadoAlMaxilarInferior.text;
+    NSUserDefaults *defaultsMaxilarSuperiorAdelantadoAlMaxilarInferior = [NSUserDefaults standardUserDefaults];
+    [defaultsMaxilarSuperiorAdelantadoAlMaxilarInferior setObject:enviaMaxilarSuperiorAdelantadoAlMaxilarInferior forKey:@"enviaMaxilarSuperiorAdelantadoAlMaxilarInferior"];
+    [defaultsMaxilarSuperiorAdelantadoAlMaxilarInferior synchronize];
     
-    NSString *enviaFrecuenciaRoncaTresCuatroSemanaX = FrecuenciaRoncaTresCuatroSemanaX.text;
-    NSUserDefaults *defaultsFrecuenciaRoncaTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsFrecuenciaRoncaTresCuatroSemanaX setObject:enviaFrecuenciaRoncaTresCuatroSemanaX forKey:@"enviaStringFrecuenciaRoncaTresCuatroSemanaX"];
-    [defaultsFrecuenciaRoncaTresCuatroSemanaX synchronize];
+    NSString *enviaMaxilarInferiorAdelantadoAlMaxilarSuperior = MaxilarInferiorAdelantadoAlMaxilarSuperior.text;
+    NSUserDefaults *defaultsMaxilarInferiorAdelantadoAlMaxilarSuperior = [NSUserDefaults standardUserDefaults];
+    [defaultsMaxilarInferiorAdelantadoAlMaxilarSuperior setObject:enviaMaxilarInferiorAdelantadoAlMaxilarSuperior forKey:@"enviaMaxilarInferiorAdelantadoAlMaxilarSuperior"];
+    [defaultsMaxilarInferiorAdelantadoAlMaxilarSuperior synchronize];
     
-    NSString *enviaFrecuenciaRoncaDosUnoSemanaX = FrecuenciaRoncaDosUnoSemanaX.text;
-    NSUserDefaults *defaultsFrecuenciaRoncaDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsFrecuenciaRoncaDosUnoSemanaX setObject:enviaFrecuenciaRoncaDosUnoSemanaX forKey:@"enviaStringFrecuenciaRoncaDosUnoSemanaX"];
-    [defaultsFrecuenciaRoncaDosUnoSemanaX synchronize];
+    NSString *enviaMolaresInferioreInclinadosHaciaAdentro = MolaresInferioreInclinadosHaciaAdentro.text;
+    NSUserDefaults *defaultsMolaresInferioreInclinadosHaciaAdentro = [NSUserDefaults standardUserDefaults];
+    [defaultsMolaresInferioreInclinadosHaciaAdentro setObject:enviaMolaresInferioreInclinadosHaciaAdentro forKey:@"enviaMolaresInferioreInclinadosHaciaAdentro"];
+    [defaultsMolaresInferioreInclinadosHaciaAdentro synchronize];
     
-    NSString *enviaFrecuenciaRoncaDosUnoMesX = FrecuenciaRoncaDosUnoMesX.text;
-    NSUserDefaults *defaultsFrecuenciaRoncaDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    [defaultsFrecuenciaRoncaDosUnoMesX setObject:enviaFrecuenciaRoncaDosUnoMesX forKey:@"enviaStringFrecuenciaRoncaDosUnoMesX"];
-    [defaultsFrecuenciaRoncaDosUnoMesX synchronize];
+    NSString *enviaDientesHaciaAfuera = DientesHaciaAfuera.text;
+    NSUserDefaults *defaultsDientesHaciaAfuera = [NSUserDefaults standardUserDefaults];
+    [defaultsDientesHaciaAfuera setObject:enviaDientesHaciaAfuera forKey:@"enviaDientesHaciaAfuera"];
+    [defaultsDientesHaciaAfuera synchronize];
     
-    NSString *enviaFrecuenciaRoncaNuncaX = FrecuenciaRoncaNuncaX.text;
-    NSUserDefaults *defaultsFrecuenciaRoncaNuncaX = [NSUserDefaults standardUserDefaults];
-    [defaultsFrecuenciaRoncaNuncaX setObject:enviaFrecuenciaRoncaNuncaX forKey:@"enviaStringFrecuenciaRoncaNuncaX"];
-    [defaultsFrecuenciaRoncaNuncaX synchronize];
+    NSString *enviaProblemasDeCrecimiento = ProblemasDeCrecimiento.text;
+    NSUserDefaults *defaultsProblemasDeCrecimiento = [NSUserDefaults standardUserDefaults];
+    [defaultsProblemasDeCrecimiento setObject:enviaProblemasDeCrecimiento forKey:@"enviaProblemasDeCrecimiento"];
+    [defaultsProblemasDeCrecimiento synchronize];
     
-    NSString *enviaRonquidoMolestaNo = RonquidoMolestaNo.text;
-    NSUserDefaults *defaultsRonquidoMolestaNo = [NSUserDefaults standardUserDefaults];
-    [defaultsRonquidoMolestaNo setObject:enviaRonquidoMolestaNo forKey:@"enviaStringRonquidoMolestaNo"];
-    [defaultsRonquidoMolestaNo synchronize];
+    NSString *enviaProblemasDeLaArticulacionTemperomandibular = ProblemasDeLaArticulacionTemperomandibular.text;
+    NSUserDefaults *defaultsProblemasDeLaArticulacionTemperomandibular = [NSUserDefaults standardUserDefaults];
+    [defaultsProblemasDeLaArticulacionTemperomandibular setObject:enviaProblemasDeLaArticulacionTemperomandibular forKey:@"enviaStringRonquidoMolestaNo"];
+    [defaultsProblemasDeLaArticulacionTemperomandibular synchronize];
     
-    NSString *enviaRonquidoMolestaSi = RonquidoMolestaSi.text;
-    NSUserDefaults *defaultsRonquidoMolestaSi = [NSUserDefaults standardUserDefaults];
-    [defaultsRonquidoMolestaSi setObject:enviaRonquidoMolestaSi forKey:@"enviaStringRonquidoMolestaSi"];
-    [defaultsRonquidoMolestaSi synchronize];
+    NSString *enviaPerimetroDelArcoDisminuidoPaladar = PerimetroDelArcoDisminuidoPaladar.text;
+    NSUserDefaults *defaultsPerimetroDelArcoDisminuidoPaladar = [NSUserDefaults standardUserDefaults];
+    [defaultsPerimetroDelArcoDisminuidoPaladar setObject:enviaPerimetroDelArcoDisminuidoPaladar forKey:@"enviaPerimetroDelArcoDisminuidoPaladar"];
+    [defaultsPerimetroDelArcoDisminuidoPaladar synchronize];
     
-    NSString *enviaPresionAltaNo = PresionAltaNo.text;
-    NSUserDefaults *defaultsPresionAltaNo = [NSUserDefaults standardUserDefaults];
-    [defaultsPresionAltaNo setObject:enviaPresionAltaNo forKey:@"enviaStringPresionAltaNo"];
-    [defaultsPresionAltaNo synchronize];
+    NSString *enviaNoRecomendamosTRatamientoEnEsteMomento = NoRecomendamosTRatamientoEnEsteMomento.text;
+    NSUserDefaults *defaultsNoRecomendamosTRatamientoEnEsteMomento = [NSUserDefaults standardUserDefaults];
+    [defaultsNoRecomendamosTRatamientoEnEsteMomento setObject:enviaNoRecomendamosTRatamientoEnEsteMomento forKey:@"enviaNoRecomendamosTRatamientoEnEsteMomento"];
+    [defaultsNoRecomendamosTRatamientoEnEsteMomento synchronize];
     
-    NSString *enviaPresionAltaSi = PresionAltaSi.text;
-    NSUserDefaults *defaultsPresionAltaSi = [NSUserDefaults standardUserDefaults];
-    [defaultsPresionAltaSi setObject:enviaPresionAltaSi forKey:@"enviaStringPresionAltaSi"];
-    [defaultsPresionAltaSi synchronize];
+    NSString *enviaPrecisaraTratamientoOrtodoncicoEnElFuturo = PrecisaraTratamientoOrtodoncicoEnElFuturo.text;
+    NSUserDefaults *defaultsPrecisaraTratamientoOrtodoncicoEnElFuturo = [NSUserDefaults standardUserDefaults];
+    [defaultsPrecisaraTratamientoOrtodoncicoEnElFuturo setObject:enviaPrecisaraTratamientoOrtodoncicoEnElFuturo forKey:@"enviaPrecisaraTratamientoOrtodoncicoEnElFuturo"];
+    [defaultsPrecisaraTratamientoOrtodoncicoEnElFuturo synchronize];
     
-    NSString *enviaPausaRespiracionTodosDiasX = PausaRespiracionTodosDiasX.text;
-    NSUserDefaults *defaultsPausaRespiracionTodosDiasX = [NSUserDefaults standardUserDefaults];
-    [defaultsPausaRespiracionTodosDiasX setObject:enviaPausaRespiracionTodosDiasX forKey:@"enviaStringPausaRespiracionTodosDiasX"];
-    [defaultsPausaRespiracionTodosDiasX synchronize];
+    NSString *enviaHaremosOtraRevisionAlPaciente = HaremosOtraRevisionAlPaciente.text;
+    NSUserDefaults *defaultsHaremosOtraRevisionAlPaciente = [NSUserDefaults standardUserDefaults];
+    [defaultsHaremosOtraRevisionAlPaciente setObject:enviaHaremosOtraRevisionAlPaciente forKey:@"enviaHaremosOtraRevisionAlPaciente"];
+    [defaultsHaremosOtraRevisionAlPaciente synchronize];
     
-    NSString *enviaPausaRespiracionTresCuatroSemanaX = PausaRespiracionTresCuatroSemanaX.text;
-    NSUserDefaults *defaultsPausaRespiracionTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsPausaRespiracionTresCuatroSemanaX setObject:enviaPausaRespiracionTresCuatroSemanaX forKey:@"enviaStringPausaRespiracionTresCuatroSemanaX"];
-    [defaultsPausaRespiracionTresCuatroSemanaX synchronize];
+    NSString *enviaEsPosibleTratamientoAhora = EsPosibleTratamientoAhora.text;
+    NSUserDefaults *defaultsEsPosibleTratamientoAhora = [NSUserDefaults standardUserDefaults];
+    [defaultsEsPosibleTratamientoAhora setObject:enviaEsPosibleTratamientoAhora forKey:@"enviaEsPosibleTratamientoAhora"];
+    [defaultsEsPosibleTratamientoAhora synchronize];
     
-    NSString *enviaPausaRespiracionDosUnoSemanaX = PausaRespiracionDosUnoSemanaX.text;
-    NSUserDefaults *defaultsPausaRespiracionDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsPausaRespiracionDosUnoSemanaX setObject:enviaPausaRespiracionDosUnoSemanaX forKey:@"enviaStringPausaRespiracionDosUnoSemanaX"];
-    [defaultsPausaRespiracionDosUnoSemanaX synchronize];
+    NSString *enviaRealizarUnasRadiografias = RealizarUnasRadiografias.text;
+    NSUserDefaults *defaultsRealizarUnasRadiografias = [NSUserDefaults standardUserDefaults];
+    [defaultsRealizarUnasRadiografias setObject:enviaRealizarUnasRadiografias forKey:@"enviaRealizarUnasRadiografias"];
+    [defaultsRealizarUnasRadiografias synchronize];
     
-    NSString *enviaPausaRespiracionDosUnoMesX = PausaRespiracionDosUnoMesX.text;
-    NSUserDefaults *defaultsPausaRespiracionDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    [defaultsPausaRespiracionDosUnoMesX setObject:enviaPausaRespiracionDosUnoMesX forKey:@"enviaStringPausaRespiracionDosUnoMesX"];
-    [defaultsPausaRespiracionDosUnoMesX synchronize];
+    NSString *enviaVolverAPedirCitaTraerRadiografias = VolverAPedirCitaTraerRadiografias.text;
+    NSUserDefaults *defaultsVolverAPedirCitaTraerRadiografias = [NSUserDefaults standardUserDefaults];
+    [defaultsVolverAPedirCitaTraerRadiografias setObject:enviaVolverAPedirCitaTraerRadiografias forKey:@"enviaVolverAPedirCitaTraerRadiografias"];
+    [defaultsVolverAPedirCitaTraerRadiografias synchronize];
     
-    NSString *enviaPausaRespiracionNuncaX = PausaRespiracionNuncaX.text;
-    NSUserDefaults *defaultsPausaRespiracionNuncaX = [NSUserDefaults standardUserDefaults];
-    [defaultsPausaRespiracionNuncaX setObject:enviaPausaRespiracionNuncaX forKey:@"enviaStringPausaRespiracionNuncaX"];
-    [defaultsPausaRespiracionNuncaX synchronize];
+    NSString *enviaCitaParComentarResultados = CitaParComentarResultados.text;
+    NSUserDefaults *defaultsCitaParComentarResultados = [NSUserDefaults standardUserDefaults];
+    [defaultsCitaParComentarResultados setObject:enviaCitaParComentarResultados forKey:@"enviaCitaParComentarResultados"];
+    [defaultsCitaParComentarResultados synchronize];
     
-    NSString *enviaCanzadoLevantarseTodosDiasX = CanzadoLevantarseTodosDiasX.text;
-    NSUserDefaults *defaultsCanzadoLevantarseTodosDiasX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoLevantarseTodosDiasX setObject:enviaCanzadoLevantarseTodosDiasX forKey:@"enviaStringCanzadoLevantarseTodosDiasX"];
-    [defaultsCanzadoLevantarseTodosDiasX synchronize];
+    NSString *enviaCitaASuDentista = CitaASuDentista.text;
+    NSUserDefaults *defaultsCitaASuDentista = [NSUserDefaults standardUserDefaults];
+    [defaultsCitaASuDentista setObject:enviaCitaASuDentista forKey:@"enviaCitaASuDentista"];
+    [defaultsCitaASuDentista synchronize];
     
-    NSString *enviaCanzadoLevantarseTresCuatroSemanaX = CanzadoLevantarseTresCuatroSemanaX.text;
-    NSUserDefaults *defaultsCanzadoLevantarseTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoLevantarseTresCuatroSemanaX setObject:enviaCanzadoLevantarseTresCuatroSemanaX forKey:@"enviaStringCanzadoLevantarseTresCuatroSemanaX"];
-    [defaultsCanzadoLevantarseTresCuatroSemanaX synchronize];
-    
-    NSString *enviaCanzadoLevantarseDosUnoSemanaX = CanzadoLevantarseDosUnoSemanaX.text;
-    NSUserDefaults *defaultsCanzadoLevantarseDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoLevantarseDosUnoSemanaX setObject:enviaCanzadoLevantarseDosUnoSemanaX forKey:@"enviaStringCanzadoLevantarseDosUnoSemanaX"];
-    [defaultsCanzadoLevantarseDosUnoSemanaX synchronize];
-    
-    NSString *enviaCanzadoLevantarseDosUnoMesX = CanzadoLevantarseDosUnoMesX.text;
-    NSUserDefaults *defaultsCanzadoLevantarseDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoLevantarseDosUnoMesX setObject:enviaCanzadoLevantarseDosUnoMesX forKey:@"enviaStringCanzadoLevantarseDosUnoMesX"];
-    [defaultsCanzadoLevantarseDosUnoMesX synchronize];
-    
-    NSString *enviaCanzadoLevantarseNuncaX = CanzadoLevantarseNuncaX.text;
-    NSUserDefaults *defaultsCanzadoLevantarseNuncaX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoLevantarseNuncaX setObject:enviaCanzadoLevantarseNuncaX forKey:@"enviaStringCanzadoLevantarseNuncaX"];
-    [defaultsCanzadoLevantarseNuncaX synchronize];
-    
-    NSString *enviaCanzadoDiaTodosDiasX = CanzadoDiaTodosDiasX.text;
-    NSUserDefaults *defaultsCanzadoDiaTodosDiasX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoDiaTodosDiasX setObject:enviaCanzadoDiaTodosDiasX forKey:@"enviaStringCanzadoDiaTodosDiasX"];
-    [defaultsCanzadoDiaTodosDiasX synchronize];
-    
-    NSString *enviaCanzadoDiaTresCuatroSemanaX = CanzadoDiaTresCuatroSemanaX.text;
-    NSUserDefaults *defaultsCanzadoDiaTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoDiaTresCuatroSemanaX setObject:enviaCanzadoDiaTresCuatroSemanaX forKey:@"enviaStringCanzadoDiaTresCuatroSemanaX"];
-    [defaultsCanzadoDiaTresCuatroSemanaX synchronize];
-    
-    NSString *enviaCanzadoDiaDosUnoSemanaX = CanzadoDiaDosUnoSemanaX.text;
-    NSUserDefaults *defaultsCanzadoDiaDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoDiaDosUnoSemanaX setObject:enviaCanzadoDiaDosUnoSemanaX forKey:@"enviaStringCanzadoDiaDosUnoSemanaX"];
-    [defaultsCanzadoDiaDosUnoSemanaX synchronize];
-    
-    NSString *enviaCanzadoDiaDosUnoMesX = CanzadoDiaDosUnoMesX.text;
-    NSUserDefaults *defaultsCanzadoDiaDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoDiaDosUnoMesX setObject:enviaCanzadoDiaDosUnoMesX forKey:@"enviaStringCanzadoDiaDosUnoMesX"];
-    [defaultsCanzadoDiaDosUnoMesX synchronize];
-    
-    NSString *enviaCanzadoDiaNuncaX = CanzadoDiaNuncaX.text;
-    NSUserDefaults *defaultsCanzadoDiaNuncaX = [NSUserDefaults standardUserDefaults];
-    [defaultsCanzadoDiaNuncaX setObject:enviaCanzadoDiaNuncaX forKey:@"enviaStringCanzadoDiaNuncaX"];
-    [defaultsCanzadoDiaNuncaX synchronize];
-    
-    NSString *enviaDormidoVehiculoNo = CanzadoDiaDosUnoMesX.text;
-    NSUserDefaults *defaultsDormidoVehiculoNo = [NSUserDefaults standardUserDefaults];
-    [defaultsDormidoVehiculoNo setObject:enviaDormidoVehiculoNo forKey:@"enviaStringDormidoVehiculoNo"];
-    [defaultsDormidoVehiculoNo synchronize];
-    
-    NSString *enviaDormidoVehiculoSi = DormidoVehiculoSi.text;
-    NSUserDefaults *defaultsDormidoVehiculoSi = [NSUserDefaults standardUserDefaults];
-    [defaultsDormidoVehiculoSi setObject:enviaDormidoVehiculoSi forKey:@"enviaStringDormidoVehiculoSi"];
-    [defaultsDormidoVehiculoSi synchronize];
     
     /*
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Atención!"
@@ -318,408 +264,310 @@
     [Observaciones_Apnea setText:cargaStringObservaciones_Apnea];
     
        
-    NSUserDefaults *defaultsNombre_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringNombre_Apnea = [defaultsNombre_Apnea objectForKey:@"enviaStringNombre_Apnea"];
-    [Nombre_Apnea setText:cargaStringNombre_Apnea];
+    NSUserDefaults *defaultsArcoSuperiorIdeal = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringArcoSuperiorIdeal = [defaultsArcoSuperiorIdeal objectForKey:@"enviaArcoSuperiorIdeal"];
+    [ArcoSuperiorIdeal setText:cargaStringArcoSuperiorIdeal];
     
-    NSUserDefaults *defaultsApellido_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringApellido_Apnea = [defaultsApellido_Apnea objectForKey:@"enviaStringApellido_Apnea"];
-    [Apellido_Apnea setText:cargaStringApellido_Apnea];
+    NSUserDefaults *defaultsArcoInferiorideal = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringArcoInferiorideal = [defaultsArcoInferiorideal objectForKey:@"enviaArcoInferiorideal"];
+    [ArcoInferiorideal setText:cargaStringArcoInferiorideal];
     
-    NSUserDefaults *defaultsFecha_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFecha_Apnea = [defaultsFecha_Apnea objectForKey:@"enviaStringFecha_Apnea"];
-    [Fecha_Apnea setText:cargaStringFecha_Apnea];
+    NSUserDefaults *defaultsDientesSeparadosDiastemas = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDientesSeparadosDiastemas = [defaultsDientesSeparadosDiastemas objectForKey:@"enviaDientesSeparadosDiastemas"];
+    [DientesSeparadosDiastemas setText:cargaStringDientesSeparadosDiastemas];
     
-    NSUserDefaults *defaultsDireccion_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringDireccion_Apnea = [defaultsDireccion_Apnea objectForKey:@"enviaStringDireccion_Apnea"];
-    [Direccion_Apnea setText:cargaStringDireccion_Apnea];
+    NSUserDefaults *defaultsApinamientoDentario = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringApinamientoDentario = [defaultsApinamientoDentario objectForKey:@"enviaApinamientoDentario"];
+    [ApinamientoDentario setText:cargaStringApinamientoDentario];
     
-    NSUserDefaults *defaultsNumero_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringNumero_Apnea = [defaultsNumero_Apnea objectForKey:@"enviaStringNumero_Apnea"];
-    [Numero_Apnea setText:cargaStringNumero_Apnea];
+    NSUserDefaults *defaultsFaltaDeDientes = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringFaltaDeDientes = [defaultsFaltaDeDientes objectForKey:@"enviaFaltaDeDientes"];
+    [FaltaDeDientes setText:cargaStringFaltaDeDientes];
     
-    NSUserDefaults *defaultsPiso_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPiso_Apnea = [defaultsPiso_Apnea objectForKey:@"enviaStringPiso_Apnea"];
-    [Piso_Apnea setText:cargaStringPiso_Apnea];
+    NSUserDefaults *defaultsAngulacionesOFaltaDeEspacio = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringAngulacionesOFaltaDeEspacio = [defaultsAngulacionesOFaltaDeEspacio objectForKey:@"enviaAngulacionesOFaltaDeEspacio"];
+    [AngulacionesOFaltaDeEspacio setText:cargaStringAngulacionesOFaltaDeEspacio];
     
-    NSUserDefaults *defaultsLocalidad_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringLocalidad_Apnea = [defaultsLocalidad_Apnea objectForKey:@"enviaStringLocalidad_Apnea"];
-    [Localidad_Apnea setText:cargaStringLocalidad_Apnea];
+    NSUserDefaults *defaultsFaltaDeEspacioParaErupcion = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringFaltaDeEspacioParaErupcion = [defaultsFaltaDeEspacioParaErupcion objectForKey:@"enviaFaltaDeEspacioParaErupcion"];
+    [FaltaDeEspacioParaErupcion setText:cargaStringFaltaDeEspacioParaErupcion];
     
-    NSUserDefaults *defaultsCodigoPostal_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCodigoPostal_Apnea = [defaultsCodigoPostal_Apnea objectForKey:@"enviaStringCodigoPostal_Apnea"];
-    [CodigoPostal_Apnea setText:cargaStringCodigoPostal_Apnea];
+    NSUserDefaults *defaultsDientesIncluidosONoErupcionados = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDientesIncluidosONoErupcionados = [defaultsDientesIncluidosONoErupcionados objectForKey:@"enviaDientesIncluidosONoErupcionados"];
+    [DientesIncluidosONoErupcionados setText:cargaStringDientesIncluidosONoErupcionados];
     
-    NSUserDefaults *defaultsEdad_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringEdad_Apnea = [defaultsEdad_Apnea objectForKey:@"enviaStringEdad_Apnea"];
-    [Edad_Apnea setText:cargaStringEdad_Apnea];
+    NSUserDefaults *defaultsVistaFrontalIdeal = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringVistaFrontalIdeal = [defaultsVistaFrontalIdeal objectForKey:@"enviaVistaFrontalIdeal"];
+    [VistaFrontalIdeal setText:cargaStringVistaFrontalIdeal];
     
-    NSUserDefaults *defaultsFechaNacimiento_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFechaNacimiento_Apnea = [defaultsFechaNacimiento_Apnea objectForKey:@"enviaStringFechaNacimiento_Apnea"];
-    [FechaNacimiento_Apnea setText:cargaStringFechaNacimiento_Apnea];
+    NSUserDefaults *defaultsVistaLateralIdeal = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringVistaLateralIdeal = [defaultsVistaLateralIdeal objectForKey:@"enviaVistaLateralIdeal"];
+    [VistaLateralIdeal setText:cargaStringVistaLateralIdeal];
     
-    NSUserDefaults *defaultsTelefonoParticular_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringTelefonoParticular_Apnea = [defaultsTelefonoParticular_Apnea objectForKey:@"enviaStringTelefonoParticular_Apnea"];
-    [TelefonoParticular_Apnea setText:cargaStringTelefonoParticular_Apnea];
+    NSUserDefaults *defaultsDientesSuperioresHaciaAfueraVestibularizados = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDientesSuperioresHaciaAfueraVestibularizados = [defaultsDientesSuperioresHaciaAfueraVestibularizados objectForKey:@"enviaDientesSuperioresHaciaAfueraVestibularizados"];
+    [DientesSuperioresHaciaAfueraVestibularizados setText:cargaStringDientesSuperioresHaciaAfueraVestibularizados];
     
-    NSUserDefaults *defaultsTelefonoMovil_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringTelefonoMovil_Apnea = [defaultsTelefonoMovil_Apnea objectForKey:@"enviaStringTelefonoMovil_Apnea"];
-    [TelefonoMovil_Apnea setText:cargaStringTelefonoMovil_Apnea];
+    NSUserDefaults *defaultsMordidaAbiertaAnterior = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMordidaAbiertaAnterior = [defaultsMordidaAbiertaAnterior objectForKey:@"enviaMordidaAbiertaAnterior"];
+    [MordidaAbiertaAnterior setText:cargaStringMordidaAbiertaAnterior];
     
-    NSUserDefaults *defaultsCorreoElectronico_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCorreoElectronico_Apnea = [defaultsCorreoElectronico_Apnea objectForKey:@"enviaStringCorreoElectronico_Apnea"];
-    [CorreoElectronico_Apnea setText:cargaStringCorreoElectronico_Apnea];
+    NSUserDefaults *defaultsMordidaCruzadaPosterior = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMordidaCruzadaPosterior = [defaultsMordidaCruzadaPosterior objectForKey:@"enviaMordidaCruzadaPosterior"];
+    [MordidaCruzadaPosterior setText:cargaStringMordidaCruzadaPosterior];
     
-    NSUserDefaults *defaultsQuienHaReferidoConsulta_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringQuienHaReferidoConsulta_Apnea = [defaultsQuienHaReferidoConsulta_Apnea objectForKey:@"enviaStringQuienHaReferidoConsulta_Apnea"];
-    [QuienHaReferidoConsulta_Apnea setText:cargaStringQuienHaReferidoConsulta_Apnea];
+    NSUserDefaults *defaultsMandibulaHaciaAtras = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMandibulaHaciaAtras = [defaultsMandibulaHaciaAtras objectForKey:@"enviaMandibulaHaciaAtras"];
+    [MandibulaHaciaAtras setText:cargaStringMandibulaHaciaAtras];
     
-    NSUserDefaults *defaultsProblemaPrincipal_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringProblemaPrincipal_Apnea = [defaultsProblemaPrincipal_Apnea objectForKey:@"enviaStringProblemaPrincipal_Apnea"];
-    [ProblemaPrincipal_Apnea setText:cargaStringProblemaPrincipal_Apnea];
+    NSUserDefaults *defaultsPerfilEquilibrado = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringPerfilEquilibrado = [defaultsPerfilEquilibrado objectForKey:@"enviaPerfilEquilibrado"];
+    [PerfilEquilibrado setText:cargaStringPerfilEquilibrado];
     
-    NSUserDefaults *defaultsPeso_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPeso_Apnea = [defaultsPeso_Apnea objectForKey:@"enviaStringPeso_Apnea"];
-    [Peso_Apnea setText:cargaStringPeso_Apnea];
+    NSUserDefaults *defaultsDientesSinEspacioApinados = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDientesSinEspacioApinados = [defaultsDientesSinEspacioApinados objectForKey:@"enviaDientesSinEspacioApinados"];
+    [DientesSinEspacioApinados setText:cargaStringDientesSinEspacioApinados];
     
-    NSUserDefaults *defaultsTalla_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringTalla_Apnea = [defaultsTalla_Apnea objectForKey:@"enviaStringTalla_Apnea"];
-    [Talla_Apnea setText:cargaStringTalla_Apnea];
+    NSUserDefaults *defaultsEspacioExcesivo = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringEspacioExcesivo = [defaultsEspacioExcesivo objectForKey:@"enviaEspacioExcesivo"];
+    [EspacioExcesivo setText:cargaStringEspacioExcesivo];
     
-    NSUserDefaults *defaultsUstedRocaNo_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringUstedRocaNo_Apnea = [defaultsUstedRocaNo_Apnea objectForKey:@"enviaStringUstedRocaNo_Apnea"];
-    [UstedRocaNo_Apnea setText:cargaStringUstedRocaNo_Apnea];
+    NSUserDefaults *defaultsDientesIncluidosORetenidos = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDientesIncluidosORetenidos = [defaultsDientesIncluidosORetenidos objectForKey:@"enviaDientesIncluidosORetenidos"];
+    [DientesIncluidosORetenidos setText:cargaStringDientesIncluidosORetenidos];
     
-    NSUserDefaults *defaultsUstedRocaSi_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringUstedRocaSi_Apnea = [defaultsUstedRocaSi_Apnea objectForKey:@"enviaStringUstedRocaSi_Apnea"];
-    [UstedRocaSi_Apnea setText:cargaStringUstedRocaSi_Apnea];
+    NSUserDefaults *defaultsSobremordida = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringSobremordida = [defaultsSobremordida objectForKey:@"enviaSobremordida"];
+    [Sobremordida setText:cargaStringSobremordida];
     
-    NSUserDefaults *defaultsUstedRocaNoSe_Apnea = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringUstedRocaNoSe_Apnea = [defaultsUstedRocaNoSe_Apnea objectForKey:@"enviaStringUstedRocaNoSe_Apnea"];
-    [UstedRocaNoSe_Apnea setText:cargaStringUstedRocaNoSe_Apnea];
+    NSUserDefaults *defaultsMordidaAbierta = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMordidaAbierta = [defaultsMordidaAbierta objectForKey:@"enviaMordidaAbierta"];
+    [MordidaAbierta setText:cargaStringMordidaAbierta];
     
-    NSUserDefaults *defaultsIntensidadRonquidoRespiracionX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringIntensidadRonquidoRespiracionX = [defaultsIntensidadRonquidoRespiracionX objectForKey:@"enviaStringIntensidadRonquidoRespiracionX"];
-    [IntensidadRonquidoRespiracionX setText:cargaStringIntensidadRonquidoRespiracionX];
+    NSUserDefaults *defaultsDiscrepanciasEnLasLineasMedidas = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDiscrepanciasEnLasLineasMedidas = [defaultsDiscrepanciasEnLasLineasMedidas objectForKey:@"enviaDiscrepanciasEnLasLineasMedidas"];
+    [DiscrepanciasEnLasLineasMedidas setText:cargaStringDiscrepanciasEnLasLineasMedidas];
     
-    NSUserDefaults *defaultsIntensidadRonquidoIgualHablarX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringIntensidadRonquidoIgualHablarX = [defaultsIntensidadRonquidoIgualHablarX objectForKey:@"enviaStringIntensidadRonquidoIgualHablarX"];
-    [IntensidadRonquidoIgualHablarX setText:cargaStringIntensidadRonquidoIgualHablarX];
+    NSUserDefaults *defaultsArcadaSuperiorEstrecha = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringArcadaSuperiorEstrecha = [defaultsArcadaSuperiorEstrecha objectForKey:@"enviaArcadaSuperiorEstrecha"];
+    [ArcadaSuperiorEstrecha setText:cargaStringArcadaSuperiorEstrecha];
     
-    NSUserDefaults *defaultsIntensidadRonquidoMayorHablarX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringIntensidadRonquidoMayorHablarX = [defaultsIntensidadRonquidoMayorHablarX objectForKey:@"enviaStringIntensidadRonquidoMayorHablarX"];
-    [IntensidadRonquidoMayorHablarX setText:cargaStringIntensidadRonquidoMayorHablarX];
+    NSUserDefaults *defaultsMordidaCruzadaAnterior = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMordidaCruzadaAnterior = [defaultsMordidaCruzadaAnterior objectForKey:@"enviaMordidaCruzadaAnterior"];
+    [MordidaCruzadaAnterior setText:cargaStringMordidaCruzadaAnterior];
     
-    NSUserDefaults *defaultsIntensidadRonquidoMuyFuerteX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringIntensidadRonquidoMuyFuerteX = [defaultsIntensidadRonquidoMuyFuerteX objectForKey:@"enviaStringIntensidadRonquidoMuyFuerteX"];
-    [IntensidadRonquidoMuyFuerteX setText:cargaStringIntensidadRonquidoMuyFuerteX];
+    NSUserDefaults *defaultsMaxilarSuperiorAdelantadoAlMaxilarInferior = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMaxilarSuperiorAdelantadoAlMaxilarInferior = [defaultsMaxilarSuperiorAdelantadoAlMaxilarInferior objectForKey:@"enviaMaxilarSuperiorAdelantadoAlMaxilarInferior"];
+    [MaxilarSuperiorAdelantadoAlMaxilarInferior setText:cargaStringMaxilarSuperiorAdelantadoAlMaxilarInferior];
     
-    NSUserDefaults *defaultsFrecuenciaRoncaTodosDiasX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFrecuenciaRoncaTodosDiasX = [defaultsFrecuenciaRoncaTodosDiasX objectForKey:@"enviaStringFrecuenciaRoncaTodosDiasX"];
-    [FrecuenciaRoncaTodosDiasX setText:cargaStringFrecuenciaRoncaTodosDiasX];
+    NSUserDefaults *defaultsMaxilarInferiorAdelantadoAlMaxilarSuperior = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMaxilarInferiorAdelantadoAlMaxilarSuperior = [defaultsMaxilarInferiorAdelantadoAlMaxilarSuperior objectForKey:@"enviaMaxilarInferiorAdelantadoAlMaxilarSuperior"];
+    [MaxilarInferiorAdelantadoAlMaxilarSuperior setText:cargaStringMaxilarInferiorAdelantadoAlMaxilarSuperior];
     
-    NSUserDefaults *defaultsFrecuenciaRoncaTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFrecuenciaRoncaTresCuatroSemanaX = [defaultsFrecuenciaRoncaTresCuatroSemanaX objectForKey:@"enviaStringFrecuenciaRoncaTresCuatroSemanaX"];
-    [FrecuenciaRoncaTresCuatroSemanaX setText:cargaStringFrecuenciaRoncaTresCuatroSemanaX];
+    NSUserDefaults *defaultsMolaresInferioreInclinadosHaciaAdentro = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringMolaresInferioreInclinadosHaciaAdentro = [defaultsMolaresInferioreInclinadosHaciaAdentro objectForKey:@"enviaMolaresInferioreInclinadosHaciaAdentro"];
+    [MolaresInferioreInclinadosHaciaAdentro setText:cargaStringMolaresInferioreInclinadosHaciaAdentro];
     
-    NSUserDefaults *defaultsFrecuenciaRoncaDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFrecuenciaRoncaDosUnoSemanaX = [defaultsFrecuenciaRoncaDosUnoSemanaX objectForKey:@"enviaStringFrecuenciaRoncaDosUnoSemanaX"];
-    [FrecuenciaRoncaDosUnoSemanaX setText:cargaStringFrecuenciaRoncaDosUnoSemanaX];
+    NSUserDefaults *defaultsDientesHaciaAfuera = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringDientesHaciaAfuera = [defaultsDientesHaciaAfuera objectForKey:@"enviaDientesHaciaAfuera"];
+    [DientesHaciaAfuera setText:cargaStringDientesHaciaAfuera];
     
-    NSUserDefaults *defaultsFrecuenciaRoncaDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFrecuenciaRoncaDosUnoMesX = [defaultsFrecuenciaRoncaDosUnoMesX objectForKey:@"enviaStringFrecuenciaRoncaDosUnoMesX"];
-    [FrecuenciaRoncaDosUnoMesX setText:cargaStringFrecuenciaRoncaDosUnoMesX];
+    NSUserDefaults *defaultsProblemasDeCrecimiento = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringProblemasDeCrecimiento = [defaultsProblemasDeCrecimiento objectForKey:@"enviaProblemasDeCrecimiento"];
+    [ProblemasDeCrecimiento setText:cargaStringProblemasDeCrecimiento];
     
-    NSUserDefaults *defaultsFrecuenciaRoncaNuncaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringFrecuenciaRoncaNuncaX = [defaultsFrecuenciaRoncaNuncaX objectForKey:@"enviaStringFrecuenciaRoncaNuncaX"];
-    [FrecuenciaRoncaNuncaX setText:cargaStringFrecuenciaRoncaNuncaX];
+    NSUserDefaults *defaultsProblemasDeLaArticulacionTemperomandibular = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringProblemasDeLaArticulacionTemperomandibular = [defaultsProblemasDeLaArticulacionTemperomandibular objectForKey:@"enviaProblemasDeLaArticulacionTemperomandibular"];
+    [ProblemasDeLaArticulacionTemperomandibular setText:cargaStringProblemasDeLaArticulacionTemperomandibular];
     
-    NSUserDefaults *defaultsRonquidoMolestaNo = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringRonquidoMolestaNo = [defaultsRonquidoMolestaNo objectForKey:@"enviaStringRonquidoMolestaNo"];
-    [RonquidoMolestaNo setText:cargaStringRonquidoMolestaNo];
+    NSUserDefaults *defaultsPerimetroDelArcoDisminuidoPaladar = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringPerimetroDelArcoDisminuidoPaladar = [defaultsPerimetroDelArcoDisminuidoPaladar objectForKey:@"enviaPerimetroDelArcoDisminuidoPaladar"];
+    [PerimetroDelArcoDisminuidoPaladar setText:cargaStringPerimetroDelArcoDisminuidoPaladar];
     
-    NSUserDefaults *defaultsRonquidoMolestaSi = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringRonquidoMolestaSi = [defaultsRonquidoMolestaSi objectForKey:@"enviaStringRonquidoMolestaSi"];
-    [RonquidoMolestaSi setText:cargaStringRonquidoMolestaSi];
+    NSUserDefaults *defaultsNoRecomendamosTRatamientoEnEsteMomento = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringNoRecomendamosTRatamientoEnEsteMomento = [defaultsNoRecomendamosTRatamientoEnEsteMomento objectForKey:@"enviaNoRecomendamosTRatamientoEnEsteMomento"];
+    [NoRecomendamosTRatamientoEnEsteMomento setText:cargaStringNoRecomendamosTRatamientoEnEsteMomento];
     
-    NSUserDefaults *defaultsPresionAltaNo = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPresionAltaNo = [defaultsPresionAltaNo objectForKey:@"enviaStringPresionAltaNo"];
-    [PresionAltaNo setText:cargaStringPresionAltaNo];
+    NSUserDefaults *defaultsPrecisaraTratamientoOrtodoncicoEnElFuturo = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringPrecisaraTratamientoOrtodoncicoEnElFuturo = [defaultsPrecisaraTratamientoOrtodoncicoEnElFuturo objectForKey:@"enviaPrecisaraTratamientoOrtodoncicoEnElFuturo"];
+    [PrecisaraTratamientoOrtodoncicoEnElFuturo setText:cargaStringPrecisaraTratamientoOrtodoncicoEnElFuturo];
     
-    NSUserDefaults *defaultsPresionAltaSi = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPresionAltaSi = [defaultsPresionAltaSi objectForKey:@"enviaStringPresionAltaSi"];
-    [PresionAltaSi setText:cargaStringPresionAltaSi];
+    NSUserDefaults *defaultsHaremosOtraRevisionAlPaciente = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringHaremosOtraRevisionAlPaciente = [defaultsHaremosOtraRevisionAlPaciente objectForKey:@"enviaHaremosOtraRevisionAlPaciente"];
+    [HaremosOtraRevisionAlPaciente setText:cargaStringHaremosOtraRevisionAlPaciente];
     
-    NSUserDefaults *defaultsPausaRespiracionTodosDiasX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPausaRespiracionTodosDiasX = [defaultsPausaRespiracionTodosDiasX objectForKey:@"enviaStringPausaRespiracionTodosDiasX"];
-    [PausaRespiracionTodosDiasX setText:cargaStringPausaRespiracionTodosDiasX];
+    NSUserDefaults *defaultsEsPosibleTratamientoAhora = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringEsPosibleTratamientoAhora = [defaultsEsPosibleTratamientoAhora objectForKey:@"enviaEsPosibleTratamientoAhora"];
+    [EsPosibleTratamientoAhora setText:cargaStringEsPosibleTratamientoAhora];
     
-    NSUserDefaults *defaultsPausaRespiracionTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPausaRespiracionTresCuatroSemanaX = [defaultsPausaRespiracionTresCuatroSemanaX objectForKey:@"enviaStringPausaRespiracionTresCuatroSemanaX"];
-    [PausaRespiracionTresCuatroSemanaX setText:cargaStringPausaRespiracionTresCuatroSemanaX];
+    NSUserDefaults *defaultsRealizarUnasRadiografias = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringRealizarUnasRadiografias = [defaultsRealizarUnasRadiografias objectForKey:@"enviaRealizarUnasRadiografias"];
+    [RealizarUnasRadiografias setText:cargaStringRealizarUnasRadiografias];
     
-    NSUserDefaults *defaultsPausaRespiracionDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPausaRespiracionDosUnoSemanaX = [defaultsPausaRespiracionDosUnoSemanaX objectForKey:@"enviaStringPausaRespiracionDosUnoSemanaX"];
-    [PausaRespiracionDosUnoSemanaX setText:cargaStringPausaRespiracionDosUnoSemanaX];
+    NSUserDefaults *defaultsVolverAPedirCitaTraerRadiografias = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringVolverAPedirCitaTraerRadiografias = [defaultsVolverAPedirCitaTraerRadiografias objectForKey:@"enviaVolverAPedirCitaTraerRadiografias"];
+    [VolverAPedirCitaTraerRadiografias setText:cargaStringVolverAPedirCitaTraerRadiografias];
     
-    NSUserDefaults *defaultsPausaRespiracionDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPausaRespiracionDosUnoMesX = [defaultsPausaRespiracionDosUnoMesX objectForKey:@"enviaStringPausaRespiracionDosUnoMesX"];
-    [PausaRespiracionDosUnoMesX setText:cargaStringPausaRespiracionDosUnoMesX];
+    NSUserDefaults *defaultsCitaParComentarResultados = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringCitaParComentarResultados = [defaultsCitaParComentarResultados objectForKey:@"enviaCitaParComentarResultados"];
+    [CitaParComentarResultados setText:cargaStringCitaParComentarResultados];
     
-    NSUserDefaults *defaultsPausaRespiracionNuncaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringPausaRespiracionNuncaX = [defaultsPausaRespiracionNuncaX objectForKey:@"enviaStringPausaRespiracionNuncaX"];
-    [PausaRespiracionNuncaX setText:cargaStringPausaRespiracionNuncaX];
+    NSUserDefaults *defaultsCitaASuDentista = [NSUserDefaults standardUserDefaults];
+    NSString *cargaStringCitaASuDentista = [defaultsCitaASuDentista objectForKey:@"enviaCitaASuDentista"];
+    [CitaASuDentista setText:cargaStringCitaASuDentista];
     
-    NSUserDefaults *defaultsCanzadoLevantarseTodosDiasX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoLevantarseTodosDiasX = [defaultsCanzadoLevantarseTodosDiasX objectForKey:@"enviaStringCanzadoLevantarseTodosDiasX"];
-    [CanzadoLevantarseTodosDiasX setText:cargaStringCanzadoLevantarseTodosDiasX];
-        
-    NSUserDefaults *defaultsCanzadoLevantarseTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoLevantarseTresCuatroSemanaX = [defaultsCanzadoLevantarseTresCuatroSemanaX objectForKey:@"enviaStringCanzadoLevantarseTresCuatroSemanaX"];
-    [CanzadoLevantarseTresCuatroSemanaX setText:cargaStringCanzadoLevantarseTresCuatroSemanaX];
-    
-    NSUserDefaults *defaultsCanzadoLevantarseDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoLevantarseDosUnoSemanaX = [defaultsCanzadoLevantarseDosUnoSemanaX objectForKey:@"enviaStringCanzadoLevantarseDosUnoSemanaX"];
-    [CanzadoLevantarseDosUnoSemanaX setText:cargaStringCanzadoLevantarseDosUnoSemanaX];
-    
-    NSUserDefaults *defaultsCanzadoLevantarseDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoLevantarseDosUnoMesX = [defaultsCanzadoLevantarseDosUnoMesX objectForKey:@"enviaStringCanzadoLevantarseDosUnoMesX"];
-    [CanzadoLevantarseDosUnoMesX setText:cargaStringCanzadoLevantarseDosUnoMesX];
-    
-    NSUserDefaults *defaultsCanzadoLevantarseNuncaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoLevantarseNuncaX = [defaultsCanzadoLevantarseNuncaX objectForKey:@"enviaStringCanzadoLevantarseNuncaX"];
-    [CanzadoLevantarseNuncaX setText:cargaStringCanzadoLevantarseNuncaX];
-    
-    NSUserDefaults *defaultsCanzadoDiaTodosDiasX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoDiaTodosDiasX = [defaultsCanzadoDiaTodosDiasX objectForKey:@"enviaStringCanzadoDiaTodosDiasX"];
-    [CanzadoDiaTodosDiasX setText:cargaStringCanzadoDiaTodosDiasX];
-    
-    NSUserDefaults *defaultsCanzadoDiaTresCuatroSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoDiaTresCuatroSemanaX = [defaultsCanzadoDiaTresCuatroSemanaX objectForKey:@"enviaStringCanzadoDiaTresCuatroSemanaX"];
-    [CanzadoDiaTresCuatroSemanaX setText:cargaStringCanzadoDiaTresCuatroSemanaX];
-    
-    NSUserDefaults *defaultsCanzadoDiaDosUnoSemanaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoDiaDosUnoSemanaX = [defaultsCanzadoDiaDosUnoSemanaX objectForKey:@"enviaStringCanzadoDiaDosUnoSemanaX"];
-    [CanzadoDiaDosUnoSemanaX setText:cargaStringCanzadoDiaDosUnoSemanaX];
-    
-    NSUserDefaults *defaultsCanzadoDiaDosUnoMesX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoDiaDosUnoMesX = [defaultsCanzadoDiaDosUnoMesX objectForKey:@"enviaStringCanzadoDiaDosUnoMesX"];
-    [CanzadoDiaDosUnoMesX setText:cargaStringCanzadoDiaDosUnoMesX];
-    
-    NSUserDefaults *defaultsCanzadoDiaNuncaX = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringCanzadoDiaNuncaX = [defaultsCanzadoDiaNuncaX objectForKey:@"enviaStringCanzadoDiaNuncaX"];
-    [CanzadoDiaNuncaX setText:cargaStringCanzadoDiaNuncaX];
-    
-    NSUserDefaults *defaultsDormidoVehiculoNo = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringDormidoVehiculoNo = [defaultsDormidoVehiculoNo objectForKey:@"enviaStringDormidoVehiculoNo"];
-    [DormidoVehiculoNo setText:cargaStringDormidoVehiculoNo];
-    
-    NSUserDefaults *defaultsDormidoVehiculoSi = [NSUserDefaults standardUserDefaults];
-    NSString *cargaStringDormidoVehiculoSi = [defaultsDormidoVehiculoSi objectForKey:@"enviaStringDormidoVehiculoSi"];
-    [DormidoVehiculoSi setText:cargaStringDormidoVehiculoSi];
 
       
 }
 
--(IBAction)dismisseNombre_Apnea:(id)sender
-{
+-(IBAction)dismisseArcoSuperiorIdeal:(id)sender{
     [sender resignFirstResponder];
 }
 
--(IBAction)dismisseApellido_Apnea:(id)sender
-{
+-(IBAction)dismisseArcoInferiorideal:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFecha_Apnea:(id)sender
-{
+-(IBAction)dismisseDientesSeparadosDiastemas:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseDireccion_Apnea:(id)sender
-{
+
+-(IBAction)dismisseApinamientoDentario:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseNumero_Apnea:(id)sender
-{
+
+-(IBAction)dismisseFaltaDeDientes:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePiso_Apnea:(id)sender
-{
+
+-(IBAction)dismisseAngulacionesOFaltaDeEspacio:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseLocalidad_Apnea:(id)sender
-{
+
+-(IBAction)dismisseFaltaDeEspacioParaErupcion:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseCodigoPostal_Apnea:(id)sender
-{
+
+-(IBAction)dismisseDientesIncluidosONoErupcionados:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseEdad_Apnea:(id)sender
-{
+
+-(IBAction)dismisseVistaFrontalIdeal:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFechaNacimiento_Apnea:(id)sender
-{
+
+-(IBAction)dismisseVistaLateralIdeal:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseTelefonoParticular_Apnea:(id)sender
-{
+
+-(IBAction)dismisseDientesSuperioresHaciaAfueraVestibularizados:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseTelefonoMovil_Apnea:(id)sender
-{
+
+-(IBAction)dismisseMordidaAbiertaAnterior:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseCorreoElectronico_Apnea:(id)sender
-{
+
+-(IBAction)dismisseMordidaCruzadaPosterior:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseQuienHaReferidoConsulta_Apnea:(id)sender
-{
+
+-(IBAction)dismisseMandibulaHaciaAtras:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseProblemaPrincipal_Apnea:(id)sender
-{
+
+-(IBAction)dismissePerfilEquilibrado:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePeso_Apnea:(id)sender
-{
+
+-(IBAction)dismisseMandibulaHaciaAfuera:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseTalla_Apnea:(id)sender
-{
+
+-(IBAction)dismisseDientesSinEspacioApinados:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseUstedRocaNo_Apnea:(id)sender
-{
+
+-(IBAction)dismisseEspacioExcesivo:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseUstedRocaSi_Apnea:(id)sender
-{
+
+-(IBAction)dismisseDientesIncluidosORetenidos:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseUstedRocaNoSe_Apnea:(id)sender
-{
+
+-(IBAction)dismisseSobremordida:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseIntensidadRonquidoRespiracionX:(id)sender
-{
+
+-(IBAction)dismisseMordidaAbierta:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseIntensidadRonquidoIgualHablarX:(id)sender
-{
+
+-(IBAction)dismisseDiscrepanciasEnLasLineasMedidas:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseIntensidadRonquidoMayorHablarX:(id)sender
-{
+
+-(IBAction)dismisseArcadaSuperiorEstrecha:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseIntensidadRonquidoMuyFuerteX:(id)sender
-{
+
+-(IBAction)dismisseMordidaCruzadaAnterior:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFrecuenciaRoncaTodosDiasX:(id)sender
-{
+
+-(IBAction)dismisseMaxilarSuperiorAdelantadoAlMaxilarInferior:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFrecuenciaRoncaTresCuatroSemanaX:(id)sender
-{
+
+-(IBAction)dismisseMaxilarInferiorAdelantadoAlMaxilarSuperior:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFrecuenciaRoncaDosUnoSemanaX:(id)sender
-{
+
+-(IBAction)dismisseMolaresInferioreInclinadosHaciaAdentro:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFrecuenciaRoncaDosUnoMesX:(id)sender
-{
+
+-(IBAction)dismisseDientesHaciaAfuera:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseFrecuenciaRoncaNuncaX:(id)sender
-{
+
+-(IBAction)dismisseProblemasDeCrecimiento:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseRonquidoMolestaNo:(id)sender
-{
+
+-(IBAction)dismisseProblemasDeLaArticulacionTemperomandibular:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismisseRonquidoMolestaSi:(id)sender
-{
+
+-(IBAction)dismissePerimetroDelArcoDisminuidoPaladar:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePresionAltaNo:(id)sender
-{
+
+-(IBAction)dismisseNoRecomendamosTRatamientoEnEsteMomento:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePresionAltaSi:(id)sender
-{
+
+-(IBAction)dismissePrecisaraTratamientoOrtodoncicoEnElFuturo:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePausaRespiracionTodosDiasX:(id)sender
-{
+
+-(IBAction)dismisseHaremosOtraRevisionAlPaciente:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePausaRespiracionTresCuatroSemanaX:(id)sender
-{
+
+-(IBAction)dismisseEsPosibleTratamientoAhora:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePausaRespiracionDosUnoSemanaX:(id)sender
-{
+
+-(IBAction)dismisseRealizarUnasRadiografias:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePausaRespiracionDosUnoMesX:(id)sender
-{
+
+-(IBAction)dismisseVolverAPedirCitaTraerRadiografias:(id)sender{
     [sender resignFirstResponder];
 }
--(IBAction)dismissePausaRespiracionNuncaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoLevantarseTodosDiasX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoLevantarseTresCuatroSemanaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoLevantarseDosUnoSemanaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoLevantarseDosUnoMesX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoLevantarseNuncaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoDiaTodosDiasX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoDiaTresCuatroSemanaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoDiaDosUnoSemanaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoDiaDosUnoMesX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseCanzadoDiaNuncaX:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseDormidoVehiculoNo:(id)sender
-{
-    [sender resignFirstResponder];
-}
--(IBAction)dismisseDormidoVehiculoSi:(id)sender
-{
+
+-(IBAction)dismisseCitaASuDentista:(id)sender{
     [sender resignFirstResponder];
 }
 
@@ -737,205 +585,161 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if (textField == Nombre_Apnea)
+    if (textField == ArcoSuperiorIdeal)
     {
-        [Nombre_Apnea becomeFirstResponder];
+        [ArcoSuperiorIdeal becomeFirstResponder];
     }
-    else if (textField == Apellido_Apnea)
+    else if (textField == ArcoInferiorideal)
     {
-        [Apellido_Apnea becomeFirstResponder];
+        [ArcoInferiorideal becomeFirstResponder];
     }
-    else if (textField == Fecha_Apnea)
+    else if (textField == DientesSeparadosDiastemas)
     {
-        [Fecha_Apnea becomeFirstResponder];
+        [DientesSeparadosDiastemas becomeFirstResponder];
     }
-    else if (textField == Direccion_Apnea)
+    else if (textField == ApinamientoDentario)
     {
-        [Direccion_Apnea becomeFirstResponder];
+        [ApinamientoDentario becomeFirstResponder];
     }
-    else if (textField == Numero_Apnea)
+    else if (textField == FaltaDeDientes)
     {
-        [Numero_Apnea becomeFirstResponder];
+        [FaltaDeDientes becomeFirstResponder];
     }
-    else if (textField == Piso_Apnea)
+    else if (textField == AngulacionesOFaltaDeEspacio)
     {
-        [Piso_Apnea becomeFirstResponder];
+        [AngulacionesOFaltaDeEspacio becomeFirstResponder];
     }
-    else if (textField == Localidad_Apnea)
+    else if (textField == FaltaDeEspacioParaErupcion)
     {
-        [Localidad_Apnea becomeFirstResponder];
+        [FaltaDeEspacioParaErupcion becomeFirstResponder];
     }
-    else if (textField == CodigoPostal_Apnea)
+    else if (textField == DientesIncluidosONoErupcionados)
     {
-        [CodigoPostal_Apnea becomeFirstResponder];
+        [DientesIncluidosONoErupcionados becomeFirstResponder];
     }
-    else if (textField == Edad_Apnea)
+    else if (textField == VistaFrontalIdeal)
     {
-        [Edad_Apnea becomeFirstResponder];
+        [VistaFrontalIdeal becomeFirstResponder];
     }
-    else if (textField == FechaNacimiento_Apnea)
+    else if (textField == VistaLateralIdeal)
     {
-        [FechaNacimiento_Apnea becomeFirstResponder];
+        [VistaLateralIdeal becomeFirstResponder];
     }
-    else if (textField == TelefonoParticular_Apnea)
+    else if (textField == DientesSuperioresHaciaAfueraVestibularizados)
     {
-        [TelefonoParticular_Apnea becomeFirstResponder];
+        [DientesSuperioresHaciaAfueraVestibularizados becomeFirstResponder];
     }
-    else if (textField == TelefonoMovil_Apnea)
+    else if (textField == MordidaAbiertaAnterior)
     {
-        [TelefonoMovil_Apnea becomeFirstResponder];
+        [MordidaAbiertaAnterior becomeFirstResponder];
     }
-    else if (textField == CorreoElectronico_Apnea)
+    else if (textField == MordidaCruzadaPosterior)
     {
-        [CorreoElectronico_Apnea becomeFirstResponder];
+        [MordidaCruzadaPosterior becomeFirstResponder];
     }
-    else if (textField == QuienHaReferidoConsulta_Apnea)
+    else if (textField == MandibulaHaciaAtras)
     {
-        [QuienHaReferidoConsulta_Apnea becomeFirstResponder];
+        [MandibulaHaciaAtras becomeFirstResponder];
     }
-    else if (textField == ProblemaPrincipal_Apnea)
+    else if (textField == MandibulaHaciaAfuera)
     {
-        [ProblemaPrincipal_Apnea becomeFirstResponder];
+        [MandibulaHaciaAfuera becomeFirstResponder];
     }
-    else if (textField == Peso_Apnea)
+    else if (textField == PerfilEquilibrado)
     {
-        [Peso_Apnea becomeFirstResponder];
+        [PerfilEquilibrado becomeFirstResponder];
     }
-    else if (textField == Talla_Apnea)
+    else if (textField == DientesSinEspacioApinados)
     {
-        [Talla_Apnea becomeFirstResponder];
+        [DientesSinEspacioApinados becomeFirstResponder];
     }
-    else if (textField == UstedRocaNo_Apnea)
+    else if (textField == EspacioExcesivo)
     {
-        [UstedRocaNo_Apnea becomeFirstResponder];
+        [EspacioExcesivo becomeFirstResponder];
     }
-    else if (textField == UstedRocaSi_Apnea)
+    else if (textField == DientesIncluidosORetenidos)
     {
-        [UstedRocaSi_Apnea becomeFirstResponder];
+        [DientesIncluidosORetenidos becomeFirstResponder];
     }
-    else if (textField == UstedRocaNoSe_Apnea)
+    else if (textField == Sobremordida)
     {
-        [UstedRocaNoSe_Apnea becomeFirstResponder];
+        [Sobremordida becomeFirstResponder];
     }
-    else if (textField == IntensidadRonquidoRespiracionX)
+    else if (textField == MordidaAbierta)
     {
-        [IntensidadRonquidoRespiracionX becomeFirstResponder];
+        [MordidaAbierta becomeFirstResponder];
     }
-    else if (textField == IntensidadRonquidoIgualHablarX)
+    else if (textField == DiscrepanciasEnLasLineasMedidas)
     {
-        [IntensidadRonquidoIgualHablarX becomeFirstResponder];
+        [DiscrepanciasEnLasLineasMedidas becomeFirstResponder];
     }
-    else if (textField == IntensidadRonquidoMayorHablarX)
+    else if (textField == ArcadaSuperiorEstrecha)
     {
-        [IntensidadRonquidoMayorHablarX becomeFirstResponder];
+        [ArcadaSuperiorEstrecha becomeFirstResponder];
     }
-    else if (textField == IntensidadRonquidoMuyFuerteX)
+    else if (textField == MordidaCruzadaAnterior)
     {
-        [IntensidadRonquidoMuyFuerteX becomeFirstResponder];
+        [MordidaCruzadaAnterior becomeFirstResponder];
     }
-    else if (textField == FrecuenciaRoncaTodosDiasX)
+    else if (textField == MaxilarSuperiorAdelantadoAlMaxilarInferior)
     {
-        [FrecuenciaRoncaTodosDiasX becomeFirstResponder];
+        [MaxilarSuperiorAdelantadoAlMaxilarInferior becomeFirstResponder];
     }
-    else if (textField == FrecuenciaRoncaTresCuatroSemanaX)
+    else if (textField == MaxilarInferiorAdelantadoAlMaxilarSuperior)
     {
-        [FrecuenciaRoncaTresCuatroSemanaX becomeFirstResponder];
+        [MaxilarInferiorAdelantadoAlMaxilarSuperior becomeFirstResponder];
     }
-    else if (textField == FrecuenciaRoncaDosUnoSemanaX)
+    else if (textField == MolaresInferioreInclinadosHaciaAdentro)
     {
-        [FrecuenciaRoncaDosUnoSemanaX becomeFirstResponder];
+        [MolaresInferioreInclinadosHaciaAdentro becomeFirstResponder];
     }
-    else if (textField == FrecuenciaRoncaDosUnoMesX)
+    else if (textField == DientesHaciaAfuera)
     {
-        [FrecuenciaRoncaDosUnoMesX becomeFirstResponder];
+        [DientesHaciaAfuera becomeFirstResponder];
     }
-    else if (textField == FrecuenciaRoncaNuncaX)
+    else if (textField == ProblemasDeCrecimiento)
     {
-        [FrecuenciaRoncaNuncaX becomeFirstResponder];
+        [ProblemasDeCrecimiento becomeFirstResponder];
     }
-    else if (textField == RonquidoMolestaNo)
+    else if (textField == ProblemasDeLaArticulacionTemperomandibular)
     {
-        [RonquidoMolestaNo becomeFirstResponder];
+        [ProblemasDeLaArticulacionTemperomandibular becomeFirstResponder];
     }
-    else if (textField == RonquidoMolestaSi)
+    else if (textField == PerimetroDelArcoDisminuidoPaladar)
     {
-        [RonquidoMolestaSi becomeFirstResponder];
+        [PerimetroDelArcoDisminuidoPaladar becomeFirstResponder];
     }
-    else if (textField == PresionAltaNo)
+    else if (textField == NoRecomendamosTRatamientoEnEsteMomento)
     {
-        [PresionAltaNo becomeFirstResponder];
+        [NoRecomendamosTRatamientoEnEsteMomento becomeFirstResponder];
     }
-    else if (textField == PresionAltaSi)
+    else if (textField == PrecisaraTratamientoOrtodoncicoEnElFuturo)
     {
-        [PresionAltaSi becomeFirstResponder];
+        [PrecisaraTratamientoOrtodoncicoEnElFuturo becomeFirstResponder];
     }
-    else if (textField == PausaRespiracionTodosDiasX)
+    else if (textField == HaremosOtraRevisionAlPaciente)
     {
-        [PausaRespiracionTodosDiasX becomeFirstResponder];
+        [HaremosOtraRevisionAlPaciente becomeFirstResponder];
     }
-    else if (textField == PausaRespiracionTresCuatroSemanaX)
+    else if (textField == EsPosibleTratamientoAhora)
     {
-        [PausaRespiracionTresCuatroSemanaX becomeFirstResponder];
+        [EsPosibleTratamientoAhora becomeFirstResponder];
     }
-    else if (textField == PausaRespiracionDosUnoSemanaX)
+    else if (textField == RealizarUnasRadiografias)
     {
-        [PausaRespiracionDosUnoSemanaX becomeFirstResponder];
+        [RealizarUnasRadiografias becomeFirstResponder];
     }
-    else if (textField == PausaRespiracionDosUnoMesX)
+    else if (textField == VolverAPedirCitaTraerRadiografias)
     {
-        [PausaRespiracionDosUnoMesX becomeFirstResponder];
+        [VolverAPedirCitaTraerRadiografias becomeFirstResponder];
     }
-    else if (textField == PausaRespiracionNuncaX)
+    else if (textField == CitaParComentarResultados)
     {
-        [PausaRespiracionNuncaX becomeFirstResponder];
+        [CitaParComentarResultados becomeFirstResponder];
     }
-    else if (textField == CanzadoLevantarseTodosDiasX)
+    else if (textField == CitaASuDentista)
     {
-        [CanzadoLevantarseTodosDiasX becomeFirstResponder];
-    }
-    else if (textField == CanzadoLevantarseTresCuatroSemanaX)
-    {
-        [CanzadoLevantarseTresCuatroSemanaX becomeFirstResponder];
-    }
-    else if (textField == CanzadoLevantarseDosUnoSemanaX)
-    {
-        [CanzadoLevantarseDosUnoSemanaX becomeFirstResponder];
-    }
-    else if (textField == CanzadoLevantarseDosUnoMesX)
-    {
-        [CanzadoLevantarseDosUnoMesX becomeFirstResponder];
-    }
-    else if (textField == CanzadoLevantarseNuncaX)
-    {
-        [CanzadoLevantarseNuncaX becomeFirstResponder];
-    }
-    else if (textField == CanzadoDiaTodosDiasX)
-    {
-        [CanzadoDiaTodosDiasX becomeFirstResponder];
-    }
-    else if (textField == CanzadoDiaTresCuatroSemanaX)
-    {
-        [CanzadoDiaTresCuatroSemanaX becomeFirstResponder];
-    }
-    else if (textField == CanzadoDiaDosUnoSemanaX)
-    {
-        [CanzadoDiaDosUnoSemanaX becomeFirstResponder];
-    }
-    else if (textField == CanzadoDiaDosUnoMesX)
-    {
-        [CanzadoDiaDosUnoMesX becomeFirstResponder];
-    }
-    else if (textField == CanzadoDiaNuncaX)
-    {
-        [CanzadoDiaNuncaX becomeFirstResponder];
-    }
-    else if (textField == DormidoVehiculoNo)
-    {
-        [DormidoVehiculoNo becomeFirstResponder];
-    }
-    else if (textField == DormidoVehiculoSi)
-    {
-        [DormidoVehiculoSi becomeFirstResponder];
+        [CitaASuDentista becomeFirstResponder];
     }
     else
     {
@@ -998,27 +802,16 @@
     
     [alert show];
     
-    
-    /*MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-    
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
-    
-    [picker setSubject:@"Envío *.jpg para base de datos Nuevos pacientes"];
-    
-    NSArray *toRecipient = [NSArray arrayWithObject:@"phdafoe@gmail.com"];
-    
+    [picker setSubject:@"Envío *.jpg para base de datos recordatorio de pacientes"];
+    NSArray *toRecipient = [NSArray arrayWithObject:@"comunicacion@ortoface.com"];
     [picker setToRecipients:toRecipient];
-   
-    NSData *imageData = UIImageJPEGRepresentation(image, 1);
-    
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
     [picker addAttachmentData:imageData mimeType:@"../jpg" fileName:@"Screenshot.jpg"];
-    
     NSString *emailBody = @"Texto complementario";
-    
     [picker setMessageBody:emailBody isHTML:YES];
-    
-    [self presentViewController:picker animated:YES completion:nil];*/
-    
+    [self presentViewController:picker animated:YES completion:nil];
     return image;
     
         
@@ -1026,7 +819,7 @@
 
 
 
-/*- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     switch (result)
     {
@@ -1048,7 +841,7 @@
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
-}*/
+}
 
 -(void)displayScreenshotImage
 {

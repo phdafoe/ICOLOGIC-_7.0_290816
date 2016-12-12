@@ -20,14 +20,15 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControll;
-
 @property (nonatomic, strong) IBOutlet UIButton *webOrtoface;
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollViewPersonal;
+@property (weak, nonatomic) IBOutlet UIPageControl *myPageControlPersonal;
+
 
 - (IBAction)clickPageControll:(id)sender;
 
-@property (strong, nonatomic) IBOutlet iCarousel *carousel;
+//@property (strong, nonatomic) IBOutlet iCarousel *carousel;
 
 @property (nonatomic) NSMutableArray *items;
 

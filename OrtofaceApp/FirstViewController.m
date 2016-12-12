@@ -12,7 +12,7 @@
 
 @implementation FirstViewController
 
-@synthesize pageControll, scrollView, carousel, items, webOrtoface;
+@synthesize pageControll, scrollView, items, webOrtoface;
 
 
 -(void)awakeFromNib
@@ -63,7 +63,6 @@
 	
     
     //int i;
-    
     for (int i = 1; i < 7; i ++) {
         UIImageView *images = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"slider%d.png",i]]];
         images.frame = CGRectMake((i - 1)*708, 0, 708, 412);
@@ -77,7 +76,21 @@
     pageControll.numberOfPages = 6;
     pageControll.currentPage = 0;
     
-    carousel.type = iCarouselTypeCoverFlow2;
+    //carousel.type = iCarouselTypeCoverFlow2;
+    
+    for (int i = 1; i < 7; i ++) {
+        UIImageView *images = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"slider%d.png",i]]];
+        images.frame = CGRectMake((i - 1)*708, 0, 708, 412);
+        [_myScrollViewPersonal addSubview:images];
+    }
+    
+    _myScrollViewPersonal.delegate = self;
+    _myScrollViewPersonal.contentSize = CGSizeMake( 6 * 708, 412);
+    _myScrollViewPersonal.pagingEnabled = YES;
+    
+    _myPageControlPersonal.numberOfPages = 6;
+    _myPageControlPersonal.currentPage = 0;
+    
     
 }
 
